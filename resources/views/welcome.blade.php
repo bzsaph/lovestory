@@ -182,6 +182,7 @@
                     <img src="assets/img/service/brand3.jpg" alt="">
                 </div>
             </div> --}}
+            {{-- /var/www/html//public> --}}
         </div>
     </section>
     <!-- Gallery-2 img Start-->

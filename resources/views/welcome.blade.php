@@ -1,100 +1,226 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.home')
+@section('content')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+<main>
+    <!--? Slider Area Start-->
+    <div class="slider-area">
+        <div class="slider-active">
+            <!-- Single Slider -->
+            <div class="single-slider slider-height hero-overly d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-8 col-lg-6 col-md-8 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInLeft" data-delay=".3s">Date i don't know </span>
+                                <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">Me<strong> & </strong> You</h1>
+                                <p data-animation="fadeInLeft" data-delay=".9s">will get married</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+            </div>
+            <!-- Single Slider -->
+            <div class="single-slider slider-height hero-overly d-flex align-items-center">
+                <div class="container">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-8 col-lg-6 col-md-8 ">
+                            <div class="hero__caption">
+                                <span data-animation="fadeInLeft" data-delay=".3s">Date i don't know </span>
+                                <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">Me<strong> & </strong> You</h1>
+                                <p data-animation="fadeInLeft" data-delay=".9s">will get married</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+    <!-- Slider Area End-->
+    <!--? Our Story Start -->
+    <div class="Our-story-area story-padding">
+        <div class="container">
+            <!-- Section Tittle -->
+            <div class="row d-flex justify-content-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="section-tittle text-center mb-70">
+                        <h2>Our Love Story​</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="">
+                        <p>Byarinkiki gihe ubwo james na kelly bahuraga arimugitondo jemes araza arimuri muri siporo abona kelly  ntimuzacikwe niyinkuru</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-5">
+                    <div class="story-caption background-img mb-40" style="background-image: url(assets/img/gallery/story2.jpg);">
+                        <div class="story-details">
+                            <h4>Inama mubuzima</h4>
+                            <p>Ntukihurire kubabaza bishobotse wababazwa kuko uwakubabaje igikomere ntigishira ariko wowe kirashira</p>
+                            <p>Jya ugira ishuti yateye imbere kuruta ikigerageza </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="story-img">
+                        <img  class="story2" src="assets/img/gallery/story1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Story End -->
+    <!--? Services Start -->
+    <section class="pricing-card-area section-padding30 section-bg" data-background="assets/img/gallery/section_bg1.png">
+        <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-tittle text-center mb-70">
+                        <h2>Ubukwe bwumustari</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="">
+                        <p>Ubukwe Bwumusitari bukurura beshi ariko butwara meshi </p>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="row align-items-end">
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <span class="flaticon-chart"></span>
+                            <h4>The Ceremony</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
+                                <li><i class="far fa-clock"></i>5:30 PM</li>
+                                <li><i class="fas fa-map-marker-alt"></i>The Mayflower Hotel</li>
+                                <li>1127 Connecticut Avenue,NY</li>
+                                <li><i class="far fa-map"></i> Check out the map</li>
+                            </ul>
+                        </div>
+                        <div class="card-buttons mt-30">
+                            <a href="#" class="btn card-btn1">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-card active text-center mb-30">
+                        <div class="card-top">
+                            <span class="flaticon-project"></span>
+                            <h4>The Reception</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
+                                <li><i class="far fa-clock"></i>5:30 PM</li>
+                                <li><i class="fas fa-map-marker-alt"></i>The Mayflower Hotel</li>
+                                <li>1127 Connecticut Avenue,NY</li>
+                                <li><i class="far fa-map"></i> Check out the map</li>
+                            </ul>
+                        </div>
+                        <div class="card-buttons mt-30">
+                            <a href="#" class="btn card-btn1">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="single-card text-center mb-30">
+                        <div class="card-top">
+                            <span class="flaticon-award"></span>
+                            <h4>The Party</h4>
+                        </div>
+                        <div class="card-bottom">
+                            <ul>
+                                <li><i class="fas fa-calendar-alt"></i>April 20, 2016</li>
+                                <li><i class="far fa-clock"></i>5:30 PM</li>
+                                <li><i class="fas fa-map-marker-alt"></i>The Mayflower Hotel</li>
+                                <li>1127 Connecticut Avenue,NY</li>
+                                <li><i class="far fa-map"></i> Check out the map</li>
+                            </ul>
+                        </div>
+                        <div class="card-buttons mt-30">
+                            <a href="#" class="btn card-btn1">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+        </div>
+    </section>
+    <!-- Services Card End -->
+
+
+
+    <section class="brand-area section-padding-b">
+        <div class="container">
+                <!-- Section Tittle -->
+                <div class="row d-flex justify-content-center">
+                <div class="col-lg-8">
+                    <div class="section-tittle text-center mb-80">
+                        <h2>Urifuza Kuba umwe Mubandika Inkuru</h2>
+                        <img src="assets/img/gallery/tittle_img.png" alt="">
+                        <p>Twandikire kuri email :yanjye.com@gmail.com</p>
+                        <p>Twandikire kuri email :0788377874</p>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="brand-active brand-border">
+                <div class="single-brand">
+                    <img src="assets/img/service/brand1.jpg" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/service/brand2.jpg" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/service/brand3.jpg" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/service/brand4.jpg" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/service/brand5.jpg" alt="">
+                </div>
+                <div class="single-brand">
+                    <img src="assets/img/service/brand3.jpg" alt="">
+                </div>
+            </div> --}}
+        </div>
+    </section>
+    <!-- Gallery-2 img Start-->
+    <div class="gallery-area2 fix">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="gallery-active owl-carousel">
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery01.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery02.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery03.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery04.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery05.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery06.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery07.png" alt=""></a>
+                        </div>
+                        <div class="gallery-img">
+                            <a href="#"><img src="assets/img/gallery/gallery08.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+@endsection

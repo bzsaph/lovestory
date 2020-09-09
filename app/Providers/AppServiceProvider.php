@@ -26,3 +26,4 @@ class AppServiceProvider extends ServiceProvider
         Builder::defaultStringLength(191); // Update defaultStringLength
     }
 }
+

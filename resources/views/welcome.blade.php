@@ -46,7 +46,7 @@
                         <h3>Our Love Story Kanda kuri imwe muri izinkuru ziri mwibara ryumutuku​</h3>
                         <img src="assets/img/gallery/tittle_img.png" alt=""></br>
                         @foreach ($story as $item)
-                        <p class="btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Category }}</a></p>
+                        <p class="btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Title }}</a></p>
                         {{-- <code> {!!$item->Description !!}</code> --}}
 
                         @endforeach

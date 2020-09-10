@@ -45,12 +45,18 @@
                     <div class="section-tittle text-center mb-70">
                         <h3>Our Love Story Kanda kuri imwe muri izinkuru ziri mwibara ryumutuku​</h3>
                         <img src="assets/img/gallery/tittle_img.png" alt=""></br>
-                        @foreach ($story as $item)
-                        <p class="btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Title }}</a></p>
-                        {{-- <code> {!!$item->Description !!}</code> --}}
 
-                        @endforeach
-                       
+                        <div class="row">
+                            @foreach ($story as $item)
+                            <div class="col-lg-4">
+                                <p class=" btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Title }}</a></p>
+                            </div>
+                            @endforeach
+                        </div>
+
+
+
+
                     </div>
                 </div>
             </div>

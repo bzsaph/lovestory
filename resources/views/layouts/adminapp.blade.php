@@ -88,9 +88,13 @@
             <!-- END User avatar toggle-->
             <!-- START lock screen-->
             <li class="nav-item d-none d-md-block">
-              <a class="nav-link" href="lock.html" title="Lock screen">
-                <em class="icon-lock"></em>
-              </a>
+              <a class="nav-link" title="Logout"href="{{ route('logout') }}"onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                 <em class="icon-lock"></em> {{ __('Logout') }}
+             </a>
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
             </li>
             <!-- END lock screen-->
           </ul>
@@ -211,8 +215,8 @@
                 </div>
                 <!-- Name and Job-->
                 <div class="user-block-info">
-                  <span class="user-block-name">Hello, Mike</span>
-                  <span class="user-block-role">Designer</span>
+                  <span class="user-block-name">{{Auth::user()->name}}</span>
+                  {{-- <span class="user-block-role">Designer</span> --}}
                 </div>
               </div>
             </div>

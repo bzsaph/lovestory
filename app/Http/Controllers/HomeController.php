@@ -46,9 +46,5 @@ class HomeController extends Controller
         
     }
 
-    public function Readstory($id){
-        $story= DB::table('newstories')->where('id', $id)->get();
-        return view('Readstory',compact('story'));
-    }
-
+   
 }

@@ -53,18 +53,42 @@
                     <div class="main-menu f-right d-none d-lg-block">
                         <nav>
                             <ul id="navigation">
-                                <li><a href="/index"> home</a></li>
-                                <li><a href="/about">About</a></li>
-                                <li><a href="/gallery">gallery</a></li>
-                                <li><a href="/booking">Guestbook</a></li>
-                                <li><a href="/blog">Blog</a>
+                                <li><a href="/"> home</a></li>
+                                <li><a href="/">About</a></li>
+                                <li><a href="/">gallery</a></li>
+                                <li><a href="/">Guestbook</a></li>
+                                <li><a href="/">Blog</a>
                                 <ul class="submenu">
-                                        <li><a href="blog">Blog</a></li>
-                                        <li><a href="single-blog">Blog Details</a></li>
-                                        <li><a href="elements">Element</a></li>
+                                        <li><a href="/">Blog</a></li>
+                                        <li><a href="/">Blog Details</a></li>
+                                        <li><a href="/">Element</a></li>
                                 </ul>
                                 </li>
-                                <li><a href="contact">Contact Us</a></li>
+                                <li><a href="/">Contact Us</a></li>
+                                @guest
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                </li>
+                               
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }}
+                                    </a>
+    
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+    
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
                             </ul>
                         </nav>
                     </div>

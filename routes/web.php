@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','Userscontroller@welcome');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/Createstory','HomeController@Createstory');
 Route::post('/submitstoror','HomeController@submitstoror');
-Route::get('/Read/{id}','HomeController@Readstory');
+Route::get('/Read/{id}','Userscontroller@Readstory');

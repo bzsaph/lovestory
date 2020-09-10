@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Newstory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -28,4 +34,21 @@ class HomeController extends Controller
     public function Createstory(){
         return view('admin.Createstory');
     }
+    public function submitstoror(Request $request){
+        $submitestory = new Newstory();
+        $submitestory->Use_id=Auth::user()->id;
+        $submitestory->Title=$request->titleofthestory;
+        $submitestory->Description=$request->newstory;
+        $submitestory->Category=$request->category;
+        $submitestory->save();
+        Session::flash('message', "posted successfull");
+        return Redirect::back();
+        
+    }
+
+    public function Readstory($id){
+        $story= DB::table('newstories')->where('id', $id)->get();
+        return view('Readstory',compact('story'));
+    }
+
 }

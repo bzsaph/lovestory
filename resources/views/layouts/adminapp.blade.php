@@ -42,7 +42,9 @@
 
     <!-- =============== APP STYLES ===============-->
     <link rel="stylesheet" href="{{ url('assets/admin/css/app.css')}}" id="maincss">
+    {{-- <link rel="stylesheet" href="{{ url('assets/admin/css/summernote.css')}}" id="maincss"> --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+
 
   </head>
 
@@ -56,10 +58,10 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#/">
               <div class="brand-logo">
-                <img class="img-fluid" src="img/logo.png" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/img/logo/logo.png')}}" alt="App Logo">
               </div>
               <div class="brand-logo-collapsed">
-                <img class="img-fluid" src="img/logo-single.png" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/img/logo/logo.png')}}" alt="App Logo">
               </div>
             </a>
           </div>
@@ -203,7 +205,7 @@
                 <!-- User picture-->
                 <div class="user-block-picture">
                   <div class="user-block-status">
-                    <img class="img-thumbnail rounded-circle" src="img/user/02.jpg" alt="Avatar" width="60" height="60">
+                    <img class="img-thumbnail rounded-circle" src="{{ url('assets/img/logo/logo.png')}}" alt="Avatar" width="60" height="60">
                     <div class="circle bg-success circle-lg"></div>
                   </div>
                 </div>
@@ -816,6 +818,8 @@
    <script src="{{ url('assets/admin/vendor/chart.js/dist/Chart.js')}}"></script>
 
    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+   {{-- <script src="{{ url('assets/admin/js/summernote.js')}}"></script> --}}
+
 
     <!-- STORAGE API-->
     <script src="{{ url('assets/admin/vendor/js-storage/js.storage.js')}}"></script>
@@ -864,6 +868,9 @@
     <!-- =============== APP SCRIPTS ===============-->
     <script src="{{ url('assets/admin/js/app.js')}}"></script>
     <script src="{{ url('assets/admin/js/js.js')}}"></script>
+   
+
+
   </body>
 
 

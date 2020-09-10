@@ -41,11 +41,16 @@
         <div class="container">
             <!-- Section Tittle -->
             <div class="row d-flex justify-content-center">
-                <div class="col-xl-7 col-lg-8">
+                <div class="col-xl-8 col-lg-10">
                     <div class="section-tittle text-center mb-70">
-                        <h2>Our Love Story​</h2>
-                        <img src="assets/img/gallery/tittle_img.png" alt="">
-                        <p>Byarinkiki gihe ubwo james na kelly bahuraga arimugitondo jemes araza arimuri muri siporo abona kelly  ntimuzacikwe niyinkuru</p>
+                        <h3>Our Love Story Kanda kuri imwe muri izinkuru ziri mwibara ryumutuku​</h3>
+                        <img src="assets/img/gallery/tittle_img.png" alt=""></br>
+                        @foreach ($story as $item)
+                        <p class="btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Category }}</a></p>
+                        {{-- <code> {!!$item->Description !!}</code> --}}
+
+                        @endforeach
+                       
                     </div>
                 </div>
             </div>
@@ -81,7 +86,7 @@
                     </div>
                 </div>
             </div>
-          
+
         </div>
     </section>
     <!-- Services Card End -->

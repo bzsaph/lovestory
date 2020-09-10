@@ -1,5 +1,14 @@
 $('#summernote').summernote({
-    placeholder: 'Hello Bootstrap 4',
+    placeholder: 'HELLO FROM LOVE STORY',
     tabsize: 2,
-    height: 100
+    height: 120,
+    toolbar: [
+        ['style', ['style']],
+        ['font', ['bold', 'underline', 'clear']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['table', ['table']],
+        ['insert', ['link', 'picture', 'video']],
+        ['view', ['fullscreen', 'codeview', 'help']]
+    ]
 });

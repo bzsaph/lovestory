@@ -1,7 +1,7 @@
 @extends('layouts.adminapp')
 @section('content')
  <!-- Main section-->
- <section class="section-container">
+ <section  >
     <!-- Page content-->
     <div class="content-wrapper">
         <div class="content-heading">
@@ -12,13 +12,14 @@
 
         <!-- START row-->
         <div class="row">
-            <div class="col-lg-12">
-                <form class="form-horizontal" action="#" data-parsley-validate="" novalidate="">
+            <div class="col-lg-12" >
+                <form class="form-horizontal" action="/submitstoror" method="POST">
+                    @csrf
+
                     <!-- START card-->
                     <div class="card card-default">
-                        <div class="bg-gray-lighter px-3 py-2 mb-3">Range validation</div>
+                        <div class="bg-gray-lighter px-3 py-2 mb-3">Story</div>
                         <div class="card-body">
-
 
                             <fieldset>
                                 <div class="form-group row">
@@ -26,21 +27,38 @@
                                     <div class="col-md-6">
                                         <input class="form-control" type="text" readonly name="length" value="{{Auth::user()->name}}">
                                     </div>
-                                </div>
-                            </fieldset>
-                            <fieldset>
+                                </div> 
                                 <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Your story</label>
+                                    <label class="col-md-2 col-form-label">Title of the story</label>
+                                    <div class="col-md-6" style="margin-top: 10px">
+                                        <input class="form-control" type="text" name="titleofthestory">
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <textarea id="summernote" name="story"></textarea>
+
+                                <div class="form-group row">
+                                    <label class="col-md-2 col-form-label">Name of Auth</label>
+                                    <div class="col-md-6" style="margin-top:10px">
+                                        <select id="" class="form-control" name="category">
+                                            <option  >Romantic-story</option>
+                                                <option >Lovestory</option>
+                                        </select>
 
 
+                                    </div>
                                 </div>
                             </fieldset>
+
+                            
+                                <div class="form-group row" >
+                                    <label class="col-md-2 col-form-label">Your story</label>
+                                    <div class="col-md-10" style="margin-top:10px">
+                                    <textarea id="summernote" class="form-control" maxlength="600" name="newstory"></textarea>
+                                </div>
+                                </div>
+
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-info" type="submit">Run validation</button>
+                            <button class="btn btn-info" type="submit">Submite story</button>
                         </div>
                     </div>
                     <!-- END card-->

@@ -188,6 +188,9 @@
     <script src="{{ url('assets/js/jquery.counterup.min.js')}}"></script>
     <script src="{{ url('assets/js/waypoints.min.js')}}"></script>
 
+
+   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
     <!-- contact js -->
     <script src="{{ url('assets/js/contact.js')}}"></script>
     <script src="{{ url('assets/js/jquery.form.js')}}"></script>
@@ -198,6 +201,7 @@
     <!-- Jquery Plugins, main Jquery -->
     <script src="{{ url('assets/js/plugins.js')}}"></script>
     <script src="{{ url('assets/js/main.js')}}"></script>
+    <script src="{{ url('assets/admin/js/js.js')}}"></script>
 
 </body>
 </html>

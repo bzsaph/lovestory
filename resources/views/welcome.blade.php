@@ -53,10 +53,6 @@
                             </div>
                             @endforeach
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>
@@ -65,7 +61,7 @@
                     <div class="story-caption background-img mb-40" style="background-image: url(assets/img/gallery/story2.jpg);">
                         <div class="story-details">
                             <h4>Inama mubuzima</h4>
-                            <p>Ntukihurire kubabaza bishobotse wababazwa kuko uwakubabaje igikomere ntigishira ariko wowe kirashira</p>
+                            <p>Ntukihutire kubabaza bishobotse wababazwa kuko uwakubabaje igikomere ntigishira ariko wowe kirashira</p>
                             <p>Jya ugira ishuti yateye imbere kuruta ikigerageza </p>
                         </div>
                     </div>

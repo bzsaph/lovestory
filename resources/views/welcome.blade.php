@@ -2,16 +2,17 @@
 @section('content')
 
 <main>
-    <!--? Slider Area Start-->
-    <div class="slider-area">
+   
+   
+    <div class="slider-area" >
         <div class="slider-active">
             <!-- Single Slider -->
-            <div class="single-slider slider-height hero-overly d-flex align-items-center">
-                <div class="container">
+            <div class="">
+                <div class="container" style="height: 10% !important">
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-8 col-lg-6 col-md-8 ">
                             <div class="hero__caption">
-                                <span data-animation="fadeInLeft" data-delay=".3s">Date i don't know </span>
+                                <span data-animation="fadeInLeft"data-delay=".5s">Date i don't know </span>
                                 <h1 data-animation="fadeInLeft" data-delay=".5s" data-duration="2000ms">Me<strong> & </strong> You</h1>
                                 <p data-animation="fadeInLeft" data-delay=".9s">will get married</p>
                             </div>
@@ -20,7 +21,7 @@
                 </div>
             </div>
             <!-- Single Slider -->
-            <div class="single-slider slider-height hero-overly d-flex align-items-center">
+            <div class="">
                 <div class="container">
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-8 col-lg-6 col-md-8 ">
@@ -49,10 +50,11 @@
                         <div class="row">
                             @foreach ($story as $item)
                             <div class="col-lg-4">
-                                <p class=" btn btn-successfull"><a href="Read/{{$item->id}}">{{$item->Title }}</a></p>
+                                <button class="btn btn-info" style="width:100%" ><a href="Read/{{$item->id}}" class="btn bt-primary"><marquee behavior="12"  direction="right">{{$item->Title }}</marquee> </a></button>
                             </div>
                             @endforeach
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@
     <div class="content-wrapper">
         <div class="row">
            <!-- Blog Content-->
-           <div class="col-xl-9">
+           <div class="col-xl-12">
             @foreach ($story as $item)
               <div class="card card-default">
                  <div class="card-header">

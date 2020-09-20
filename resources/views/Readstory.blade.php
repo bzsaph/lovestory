@@ -1,4 +1,9 @@
 @extends('layouts.home')
+@section('tittle')
+@foreach ($story as $item)
+<title>{{$item->Title}}</title>
+@endforeach
+@endsection
 @section('content')
 
 <main>

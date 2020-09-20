@@ -49,8 +49,8 @@
 
                         <div class="row">
                             @foreach ($story as $item)
-                            <div class="col-lg-4">
-                                <button class="btn btn-info" style="width:100%" ><a href="Read/{{$item->id}}" class="btn bt-primary"><marquee behavior="12"  direction="right">{{$item->Title }}</marquee> </a></button>
+                            <div class="col-lg-4" style="margin-top: 10px !important">
+                                <button class="btn btn-info" style="width:100%" ><a  href="Read/{{$item->id}}" ><span style="width: 100% !important" direction="right">{{$item->Title }}</span> </a></button>
                             </div>
                             @endforeach
                         </div>

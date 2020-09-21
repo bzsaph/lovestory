@@ -44,7 +44,25 @@
     <link rel="stylesheet" href="{{ url('assets/admin/css/app.css')}}" id="maincss">
     {{-- <link rel="stylesheet" href="{{ url('assets/admin/css/summernote.css')}}" id="maincss"> --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-
+    <style type="text/css">
+        button[data-name=resizedDataImage]  {
+            position: relative;
+            overflow: hidden;
+        }
+    
+        button[data-name=resizedDataImage] input {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            opacity: 0;
+            font-size: 200px;
+            max-width: 100%;
+            -ms-filter: 'alpha(opacity=0)';
+            direction: ltr;
+            cursor: pointer;
+        }
+    </style>
 
   </head>
 

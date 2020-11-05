@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Comment;
+use App\User;
 use App\Newstory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -13,7 +14,8 @@ class Userscontroller extends Controller
 {
     public function welcome(){
         $story = Newstory::all();
-        return view('welcome',compact('story'));
+        $alluser = User::all();
+        return view('welcome',compact('story','alluser'));
     }
     public function Readstory($id){
         $story= DB::table('newstories')->where('id', $id)->get();

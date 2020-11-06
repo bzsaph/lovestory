@@ -49,7 +49,7 @@
             position: relative;
             overflow: hidden;
         }
-    
+
         button[data-name=resizedDataImage] input {
             position: absolute;
             top: 0;
@@ -264,6 +264,11 @@
             <a href="/Createstory" title="Widgets">
 
               <span data-localize="sidebar.nav.WIDGETS">Create story</span>
+            </a>
+          </li>
+          <li class=" ">
+            <a href="/createcategory" title="Widgets">
+              <span data-localize="sidebar.nav.WIDGETS">Create category</span>
             </a>
           </li>
           {{-- <li class=" ">
@@ -890,7 +895,7 @@
     <!-- =============== APP SCRIPTS ===============-->
     <script src="{{ url('assets/admin/js/app.js')}}"></script>
     <script src="{{ url('assets/admin/js/js.js')}}"></script>
-   
+
 
 
   </body>

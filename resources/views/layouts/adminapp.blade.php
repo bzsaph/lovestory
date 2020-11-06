@@ -76,10 +76,10 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#/">
               <div class="brand-logo">
-                <img class="img-fluid" src="{{ url('assets/img/logo/logo.png')}}" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/home/img/favicon.png')}}" alt="App Logo">
               </div>
               <div class="brand-logo-collapsed">
-                <img class="img-fluid" src="{{ url('assets/img/logo/logo.png')}}" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/home/img/favicon.png')}}" alt="App Logo">
               </div>
             </a>
           </div>
@@ -227,7 +227,7 @@
                 <!-- User picture-->
                 <div class="user-block-picture">
                   <div class="user-block-status">
-                    <img class="img-thumbnail rounded-circle" src="{{ url('assets/img/logo/logo.png')}}" alt="Avatar" width="60" height="60">
+                    <img class="img-thumbnail rounded-circle" src="{{ url('/assets/home/img/apple-touch-icon.png')}}" alt="Avatar" width="60" height="60">
                     <div class="circle bg-success circle-lg"></div>
                   </div>
                 </div>

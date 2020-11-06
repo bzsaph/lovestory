@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Session;
 class Userscontroller extends Controller
 {
     public function welcome(){
-
         $story=DB::table('newstories')->where('Delete','0')->get();
         $alluser = User::all();
         $category =Category::all();
@@ -34,37 +33,40 @@ class Userscontroller extends Controller
         $comment->save();
         Session::flash('message', "Comment accepted success full");
         return Redirect::back();
-
     }
 
-
     public function Previous($id){
-
         $story= Newstory::find($id);
-
-
         $prev = DB::table('newstories')->where([['id', '<', $id],['Category','=', $story->Category]])->orderBy('id','desc')->first();
         if(!$prev){
             $prev = DB::table('newstories')->orderBy('id','desc')->first();
             return redirect()->back();
         }
         return Redirect::to('Read/'.$prev ->id);
-            // return Redirect::to('Read/'.$prev ->id);
     }
     public function Next($id){
         $story= Newstory::find($id);
         $next = DB::table('newstories')->where([['id', '>', $id],['Category','=', $story->Category]])->orderBy('id','asc')->first();
-
         if(!$next){
             $next = DB::table('newstories')->orderBy('id','asc')->first();
             return redirect()->back();
-    }else{
-
-        return Redirect::to('Read/'.$next->id);
-
+        }else{
+            return Redirect::to('Read/'.$next->id);
+        }
     }
-
-    }
+    public function createcategory()
+        {
+            $category =Category::all();
+        return view('admin.category',compact('status'));
+        }
+    public function postcategory(Request $request)
+        {
+            $category =new Category();
+            $category->name=$request->name;
+            $category->status="1";
+            $category->save();
+            return redirect()->back();
+        }
 
 
 }

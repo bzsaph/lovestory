@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Newstory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -32,7 +33,8 @@ class HomeController extends Controller
         return view('admin.dashboard');
     }
     public function Createstory(){
-        return view('admin.Createstory');
+        $category =Category::all();
+        return view('admin.Createstory',compact('category'));
     }
     public function submitstoror(Request $request){
         $submitestory = new Newstory();
@@ -43,8 +45,8 @@ class HomeController extends Controller
         $submitestory->save();
         Session::flash('message', "posted successfull");
         return Redirect::back();
-        
+
     }
 
-   
+
 }

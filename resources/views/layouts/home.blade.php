@@ -1,231 +1,113 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    @yield('tittle')
-    <title>Lovestory ! home page </title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/favicon.ico')}}">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{ url('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/fontawesome-all.min.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/themify-icons.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/slick.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{ url('assets/css/style.css')}}">
+  <title>Interesing story</title>
+  <meta content="bazimyas@gmail.com" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url('assets/home/img/favicon.png') }}" rel="icon">
+  <link href="{{ url('assets/home/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url('assets/home/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/home/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/home/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/home/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/home/vendor/venobox/venobox.css') }}" rel="stylesheet">
+  <link href="{{ url('assets/home/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url('assets/home/css/style.css') }}" rel="stylesheet">
 </head>
+
 <body>
-<!-- Preloader Start -->
-{{-- <div id="preloader-active">
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-            <div class="preloader-circle"></div>
-            <div class="preloader-img pere-text">
-                <img src="{{ url('assets/img/logo/logo.png')}}" alt="">
-            </div>
-        </div>
+    <!-- ======= Top Bar ======= -->
+ <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent" style="background: #35322d">
+    <div class="container text-right">
+      <i class="icofont-phone"></i> whatsapp: +250788377874
+      <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM
     </div>
-</div> --}}
-<!-- Preloader Start -->
-<header>
-<!-- Header Start -->
-<div class="header-area">
-    <div class="main-header header-sticky">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Logo -->
-                <div class="col-xl-2 col-lg-2">
-                    <div class="logo">
-                        <a href="index"><img src="{{ url('assets/img/logo/logo.png')}}" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-xl-10 col-lg-10 col-md-10">
-                    <!-- Main-menu -->
-                    <div class="main-menu f-right d-none d-lg-block">
-                        <nav>
-                            <ul id="navigation">
-                                <li><a href="/"> home</a></li>
-                                <li><a href="/">About</a></li>
-                                <li><a href="/">gallery</a></li>
-                                <li><a href="/">Guestbook</a></li>
-                                <li><a href="/">Blog</a>
-                                <ul class="submenu">
-                                        <li><a href="/">Blog</a></li>
-                                        <li><a href="/">Blog Details</a></li>
-                                        <li><a href="/">Element</a></li>
-                                </ul>
-                                </li>
-                                <li><a href="/">Contact Us</a></li>
-                                @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
+  </section>
 
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
-                                    </a>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background: #35322d">
+    <div class="container d-flex align-items-center">
 
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
+      <div class="logo mr-auto">
+        <h1 class="text-light text-upper" ><a href="/"><span>Story advice</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="/"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <!-- Mobile Menu -->
-                <div class="col-12">
-                    <div class="mobile_menu d-block d-lg-none"></div>
-                </div>
-            </div>
-        </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#chefs">Chefs</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
     </div>
-</div>
-<!-- Header End -->
-</header>
-<div class="container">
+  </header><!-- End Header -->
+
+
+<div >
     @yield('content')
 </div>
-<footer>
-    <!-- Footer Start-->
-    <div class="footer-main" data-background="{{ url('assets/img/gallery/section_bg4.png')}}">
-        <div class="footer-area footer-padding">
-            <div class="container">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <!-- logo -->
-                                <div class="footer-logo">
-                                    <a href="index"><img src="{{ url('assets/img/logo/logo2_footer.png')}}" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3  col-lg-3 col-lg-2 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>Lovestory Info</h4>
-                                <ul>
-                                    <li><a href="#">Advice to life</a></li>
-                                    <li><a href="#">What is love</a></li>
-                                    <li><a href="#">Select friend</a></li>
-                                    <li><a href="#">How to say yes/no </a></li>
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="container">
+      <h3>story advice</h3>
+      <p> Story advice aims to help every body to write all read story with out any cost of charge but to help growing</p>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>storytell</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
 
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>ABOUT US</h4>
-                                <ul>
-                                    <li><a href="#">Rwanda kigali</a></li>
-                                    <li><a href="#">James mark s</a></li>
-                                    <li><a href="#">yanjye.com@gmail.com</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2  col-lg-3 col-md-5 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="footer-tittle">
-                                <h4>LOCATION</h4>
-                                <ul>
-                                    <li><a href="#">yanjye.com</a></li>
-                                    <li>whatsapp:+250788377874</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer-bottom area -->
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12 ">
-                                <div class="footer-copy-right text-center">
-                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://yanjye.com/" target="_blank">Lovestory</a>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
+        Designed by <a href="yanjye.com">yanjye </a>
+      </div>
     </div>
-    <!-- Footer End-->
-</footer>
+  </footer><!-- End Footer -->
 
-    <!-- JS here -->
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
-    <script src="{{ url('assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="{{ url('assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
-    <script src="{{ url('assets/js/popper.min.js')}}"></script>
-    <script src="{{ url('assets/js/bootstrap.min.js')}}"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="{{ url('assets/js/jquery.slicknav.min.js')}}"></script>
+  <!-- Vendor JS Files -->
+  <script src="{{ url('assets/home/vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/venobox/venobox.min.js') }}"></script>
+  <script src="{{ url('assets/home/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="{{ url('assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ url('assets/js/slick.min.js')}}"></script>
-    <!-- Date Picker -->
-    <script src="{{ url('assets/js/gijgo.min.js')}}"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="{{ url('assets/js/wow.min.js')}}"></script>
-    <script src="{{ url('assets/js/animated.headline.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.magnific-popup.js')}}"></script>
-
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="{{ url('assets/js/jquery.scrollUp.min.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.nice-select.min.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.sticky.js')}}"></script>
-
-    <!-- counter , waypoint -->
-    <script src="{{ url('assets/js/jquery.counterup.min.js')}}"></script>
-    <script src="{{ url('assets/js/waypoints.min.js')}}"></script>
-
-
-   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-
-    <!-- contact js -->
-    <script src="{{ url('assets/js/contact.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.form.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.validate.min.js')}}"></script>
-    <script src="{{ url('assets/js/mail-script.js')}}"></script>
-    <script src="{{ url('assets/js/jquery.ajaxchimp.min.js')}}"></script>
-
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="{{ url('assets/js/plugins.js')}}"></script>
-    <script src="{{ url('assets/js/main.js')}}"></script>
-    <script src="{{ url('assets/admin/js/js.js')}}"></script>
+  <!-- Template Main JS File -->
+  <script src="{{ url('assets/home//js/main.js') }}"></script>
 
 </body>
+
 </html>
+
+

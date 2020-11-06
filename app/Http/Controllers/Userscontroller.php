@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Comment;
 use App\User;
 use App\Newstory;
@@ -15,7 +16,8 @@ class Userscontroller extends Controller
     public function welcome(){
         $story = Newstory::all();
         $alluser = User::all();
-        return view('welcome',compact('story','alluser'));
+        $category =Category::all();
+        return view('welcome',compact('story','alluser','category'));
     }
     public function Readstory($id){
         $story= DB::table('newstories')->where('id', $id)->get();
@@ -23,7 +25,6 @@ class Userscontroller extends Controller
         return view('Readstory',compact('story','comment'));
     }
     public function Comenttostory(Request $request){
-
         $comment =new Comment();
         $comment->usename=$request->post_firstname;
         $comment->email=$request->post_email;

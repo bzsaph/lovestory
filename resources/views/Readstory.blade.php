@@ -4,13 +4,10 @@
 <title>{{$item->Title}}</title>
 @endforeach
 @endsection
-@section('content')
-
-<main>
-
-
-
-    <div class="content-wrapper">
+@section('content' )
+<section style="background: gray !important">
+<main >
+    <div class="content-wrapper container"style="background: gray !important;margin-top:5% !important">
         <div class="row">
            <!-- Blog Content-->
            <div class="col-xl-12">
@@ -127,5 +124,6 @@
 
 </main>
 
-
+</div>
+</section>
 @endsection

@@ -39,11 +39,12 @@
                    <hr class="my-4">
                  </div>
                  <div class="row">
+
                     <div class="col-lg-6">
-                       <a href="{{ URL::to( 'Next/' . $item->id ) }}">Next</a>
-                    </div>
-                    <div class="col-lg-6">
-                        <a href="{{ URL::to( 'Previous/' . $item->id ) }}" class="float-right" >Previous</a>
+                        <a href="{{ URL::to( 'Previous/' . $item->id ) }}"  >Previous</a>
+                     </div>
+                     <div class="col-lg-6">
+                        <a href="{{ URL::to( 'Next/' . $item->id ) }}" class="float-right">Next</a>
                      </div>
                 </div>
                  @endforeach

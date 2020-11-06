@@ -57,7 +57,7 @@ class Userscontroller extends Controller
     public function createcategory()
         {
             $category =Category::all();
-        return view('admin.category',compact('status'));
+        return view('admin.category',compact('category'));
         }
     public function postcategory(Request $request)
         {

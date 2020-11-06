@@ -27,7 +27,7 @@
                                     <div class="col-md-6">
                                         <input class="form-control" type="text" readonly name="length" value="{{Auth::user()->name}}">
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="form-group row">
                                     <label class="col-md-2 col-form-label">Title of the story</label>
                                     <div class="col-md-6" style="margin-top: 10px">
@@ -39,8 +39,11 @@
                                     <label class="col-md-2 col-form-label">Name of Auth</label>
                                     <div class="col-md-6" style="margin-top:10px">
                                         <select id="" class="form-control" name="category">
-                                            <option  >Romantic-story</option>
-                                                <option >Lovestory</option>
+                                            <option  selected disabled >choose category</option>
+                                            @foreach ($category as $item)
+                                            <option value="{{ $item->id }}">{{ $item->id }}</option>
+                                            @endforeach
+
                                         </select>
 
 
@@ -48,7 +51,7 @@
                                 </div>
                             </fieldset>
 
-                            
+
                                 <div class="form-group row" >
                                     <label class="col-md-2 col-form-label">Your story</label>
                                     <div class="col-md-10" style="margin-top:10px">

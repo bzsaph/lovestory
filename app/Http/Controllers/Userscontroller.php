@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Session;
 class Userscontroller extends Controller
 {
     public function welcome(){
-        $story = Newstory::all();
+
+        $story=DB::table('newstories')->where('Delete','0')->get();
         $alluser = User::all();
         $category =Category::all();
         return view('welcome',compact('story','alluser','category'));
@@ -36,7 +37,36 @@ class Userscontroller extends Controller
 
     }
 
-    //
+
+    public function Previous($id){
+
+        $story= Newstory::find($id);
+
+
+        $prev = DB::table('newstories')->where([['id', '<', $id],['Category','=', $story->Category]])->orderBy('id','desc')->first();
+        if(!$prev){
+            $prev = DB::table('newstories')->orderBy('id','desc')->first();
+            return redirect()->back();
+        }
+        return Redirect::to('Read/'.$prev ->id);
+            // return Redirect::to('Read/'.$prev ->id);
+    }
+    public function Next($id){
+        $story= Newstory::find($id);
+        $next = DB::table('newstories')->where([['id', '>', $id],['Category','=', $story->Category]])->orderBy('id','asc')->first();
+
+        if(!$next){
+            $next = DB::table('newstories')->orderBy('id','asc')->first();
+            return redirect()->back();
+    }else{
+
+        return Redirect::to('Read/'.$next->id);
+
+    }
+
+    }
+
+
 }
 
 

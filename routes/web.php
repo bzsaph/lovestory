@@ -22,3 +22,5 @@ Route::get('/Createstory','HomeController@Createstory');
 Route::post('/submitstoror','HomeController@submitstoror');
 Route::get('/Read/{id}','Userscontroller@Readstory');
 Route::post('/Comenttostory','Userscontroller@Comenttostory');
+Route::get('Previous/{id}', 'Userscontroller@Previous');
+Route::get('Next/{id}', 'Userscontroller@Next');

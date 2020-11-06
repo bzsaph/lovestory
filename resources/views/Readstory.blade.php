@@ -37,28 +37,18 @@
                     <p>{!!$item->Description!!}</p>
 
                    <hr class="my-4">
-                    {{-- <div class="btn-group" role="group" aria-label="...">
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fab fa-facebook-f text-muted"></em>
-                       </button>
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fab fa-twitter text-muted"></em>
-                       </button>
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fab fa-google-plus-g text-muted"></em>
-                       </button>
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fa fa-tumblr text-muted"></em>
-                       </button>
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fa fa-pinterest text-muted"></em>
-                       </button>
-                       <button class="btn btn-secondary" type="button">
-                          <em class="fa fa-share-alt text-muted"></em>
-                       </button>
-                    </div> --}}
                  </div>
+                 <div class="row">
+                    <div class="col-lg-6">
+                       <a href="{{ URL::to( 'Next/' . $item->id ) }}">Next</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a href="{{ URL::to( 'Previous/' . $item->id ) }}" class="float-right" >Previous</a>
+                     </div>
+                </div>
                  @endforeach
+
+
               </div>
               <div class="card">
                  <div class="card-header"> Comments</div>

@@ -30,7 +30,7 @@
 
 <body>
     <!-- ======= Top Bar ======= -->
- <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent" style="background: #35322d">
+ <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent" style="background: #35322d !important">
     <div class="container text-right">
       <i class="icofont-phone"></i> whatsapp: +250788377874
       <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM
@@ -38,7 +38,7 @@
   </section>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent" style="background: #35322d">
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent"  style="background: #35322d !important">
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
@@ -64,7 +64,6 @@
 
     </div>
   </header><!-- End Header -->
-
 
 <div >
     @yield('content')

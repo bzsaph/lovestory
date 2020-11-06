@@ -1,5 +1,73 @@
 @extends('layouts.home')
 @section('content')
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <!-- Slide 1 -->
+          <div class="carousel-item active" style="background: url({{ url('assets/home/img/slide/slide-1.jpg') }};">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"><span>love story </span> Adviced</h2>
+                <p class="animate__animated animate__fadeInUp">We live in the world where there are different problem so we need to help each other o grow</p>
+                <div>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
+                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item" style="background: url({{ url('assets/home/img/slide/slide-2.jpg') }};">
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
+                <p class="animate__animated animate__fadeInUp">In this world we need advice from people who has experince so let do it by sharing or experience</p>
+                <div>
+                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
+                    <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item" style="background: url({{ url('assets/home/img/slide/slide-3.jpg') }};">
+            <div class="carousel-background"><img src="{{ url('assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2 class="animate__animated animate__fadeInDown">Past story</h2>
+                <p class="animate__animated animate__fadeInUp">Poem and so on ween our children to know poem and once opon time story </p>
+                <div>
+                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
+                    <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+ 
 
 
 

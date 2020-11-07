@@ -6,6 +6,7 @@ use App\Category;
 use App\Comment;
 use App\User;
 use App\Newstory;
+use App\suggestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
@@ -18,6 +19,7 @@ class Userscontroller extends Controller
         $alluser = User::all();
         $category =Category::all();
         return view('welcome',compact('story','alluser','category'));
+
     }
     public function Readstory($id){
         $story= DB::table('newstories')->where('id', $id)->get();
@@ -59,14 +61,23 @@ class Userscontroller extends Controller
             $category =Category::all();
         return view('admin.category',compact('category'));
         }
-    public function postcategory(Request $request)
-        {
+    public function postcategory(Request $request){
             $category =new Category();
             $category->name=$request->name;
             $category->status="1";
             $category->save();
-            return redirect()->back();
-        }
+        return redirect()->back();
+    }
+    public function suggestion(Request $request)
+    {
+       $contactus =new suggestion();
+       $contactus->name =$request->name;
+       $contactus->email =$request->email;
+       $contactus->message =$request->message;
+       $contactus->save();
+       return redirect('welcome')->with('status', 'message sented success full');
+
+    }
 
 
 }

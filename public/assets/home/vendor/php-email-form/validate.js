@@ -8,13 +8,13 @@
 
   $('form.php-email-form').submit(function(e) {
     e.preventDefault();
-    
+
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
 
     f.children('input').each(function() { // run all inputs
-     
+
       var i = $(this); // current input
       var rule = i.attr('data-rule');
 
@@ -104,9 +104,10 @@
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
       return false;
     }
-    
+
     this_form.find('.sent-message').slideUp();
     this_form.find('.error-message').slideUp();
+    this_form.find('.statuss').slideDown();
     this_form.find('.loading').slideDown();
 
     if ( $(this).data('recaptcha-site-key') ) {
@@ -119,7 +120,7 @@
     } else {
       php_email_form_submit(this_form,action,this_form.serialize());
     }
-    
+
     return true;
   });
 
@@ -136,6 +137,9 @@
         this_form.find("input:not(input[type=submit]), textarea").val('');
       } else {
         this_form.find('.loading').slideUp();
+        this_form.find('.sent-message').slideDown();
+        this_form.find("input:not(input[type=submit]), textarea").val('');
+
         if(!msg) {
           msg = 'Form submission failed and no error message returned from: ' + action + '<br>';
         }

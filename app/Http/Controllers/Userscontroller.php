@@ -75,7 +75,7 @@ class Userscontroller extends Controller
        $contactus->email =$request->email;
        $contactus->message =$request->message;
        $contactus->save();
-       return redirect('welcome')->with('status', 'message sented success full');
+       return redirect('/')->with('status', 'message sented success full');
 
     }
     public function still()

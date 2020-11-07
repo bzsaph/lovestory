@@ -28,3 +28,4 @@ Route::get('/createcategory', 'Userscontroller@createcategory');
 Route::post('/postcategory', 'Userscontroller@postcategory');
 Route::post('/suggestion', 'Userscontroller@suggestion');
 Route::get('/still', 'Userscontroller@still');
+Route::get('/Message', 'Userscontroller@Messages');

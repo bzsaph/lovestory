@@ -271,6 +271,11 @@
               <span data-localize="sidebar.nav.WIDGETS">Create category</span>
             </a>
           </li>
+          <li class=" ">
+            <a href="/Message" title="Widgets">
+              <span data-localize="sidebar.nav.WIDGETS">comment message</span>
+            </a>
+          </li>
           {{-- <li class=" ">
             <a href="#layout" title="Layouts" data-toggle="collapse">
               <em class="icon-layers"></em>

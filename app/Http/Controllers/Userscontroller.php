@@ -82,6 +82,11 @@ class Userscontroller extends Controller
     {
        return view('still');
     }
+    public function Messages()
+    {
+        $message = suggestion::all();
+       return view('admin.commentmessage',compact('message'));
+    }
 
 
 }

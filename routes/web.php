@@ -27,3 +27,4 @@ Route::get('Next/{id}', 'Userscontroller@Next');
 Route::get('/createcategory', 'Userscontroller@createcategory');
 Route::post('/postcategory', 'Userscontroller@postcategory');
 Route::post('/suggestion', 'Userscontroller@suggestion');
+Route::get('/still', 'Userscontroller@still');

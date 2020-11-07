@@ -78,6 +78,10 @@ class Userscontroller extends Controller
        return redirect('welcome')->with('status', 'message sented success full');
 
     }
+    public function still()
+    {
+       return view('still');
+    }
 
 
 }

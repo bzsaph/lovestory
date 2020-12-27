@@ -135,7 +135,7 @@
 
 
                 @foreach ($category as $item)
-                <div class="col-md-4">
+                <div class="col-md-3" style="margin-top: 30px !important">
                     <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ $item->name }}

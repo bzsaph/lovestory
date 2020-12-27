@@ -18,6 +18,14 @@ class Userscontroller extends Controller
         $story=DB::table('newstories')->where('Delete','0')->get();
         $alluser = User::all();
         $category =Category::all();
+        foreach ($category as $key => $value) {
+            $sector = $value->id;
+            $data=DB::table('newstories')->where('Category', $sector)->get();
+
+            $category[$key]['newstories'] =$data;
+            # code...
+        }
+        // dd($category);
         return view('welcome',compact('story','alluser','category'));
 
     }
@@ -36,7 +44,6 @@ class Userscontroller extends Controller
         Session::flash('message', "Comment accepted success full");
         return Redirect::back();
     }
-
     public function Previous($id){
         $story= Newstory::find($id);
         $prev = DB::table('newstories')->where([['id', '<', $id],['Category','=', $story->Category]])->orderBy('id','desc')->first();

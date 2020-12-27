@@ -132,35 +132,30 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="menu-flters">
+
+
                 @foreach ($category as $item)
-                <li data-filter=".v{{ $item->id }}">{{ $item->name }}</li>
+                <div class="col-md-4">
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ $item->name }}
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        @foreach ($item['newstories'] as $newstory)
+                      <a class="dropdown-item" href="/Read/{{ $newstory->id }}">{{ $newstory->Title }}</a>
+
+                      @endforeach
+                    </div>
+                  </div>
+                </div>
+
+
 
                 @endforeach
 
-            </ul>
-          </div>
         </div>
 
-        <div class="row menu-container" >
-            @foreach ($story as $item)
-            <a href="Read/{{ $item->id }}">
-            <div class="col-lg-6 menu-item v{{ $item->Category }}">
-                <div class="menu-content">
-                  <a href="Read/{{ $item->id }}">{{ $item->Title }}</a><span></span>
-                </div>
-                <div class="menu-ingredients">
-                    Date :{{ $item->created_at }}
-                </div>
-              </div>
-            </a>
 
-            @endforeach
-
-
-
-        </div>
       </div>
     </section><!-- End Menu Section -->
 

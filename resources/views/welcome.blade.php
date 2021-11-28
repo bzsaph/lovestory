@@ -13,10 +13,10 @@
           <div class="carousel-item active" style="background: url({{ url('assets/home/img/slide/slide-1.jpg') }};">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>love story </span> Adviced</h2>
-                <p class="animate__animated animate__fadeInUp">We live in the world where there are different problem so we need to help each other o grow</p>
+                <h2 class="animate__animated animate__fadeInDown"><span>Impano </span> Adviced</h2>
+                <p class="animate__animated animate__fadeInUp">Impano it is the palece where every one can request to post his talent for free </p>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
+                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our talent </a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
                 </div>
               </div>
@@ -28,7 +28,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
-                <p class="animate__animated animate__fadeInUp">In this world we need advice from people who has experince so let do it by sharing or experience</p>
+                <p class="animate__animated animate__fadeInUp">Impano it is the palece where every one can request to post his talent for free</p>
                 <div>
                     <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
                     <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
@@ -42,10 +42,10 @@
             <div class="carousel-background"><img src="{{ url('assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Past story</h2>
+                <h2 class="animate__animated animate__fadeInDown">Past talent</h2>
                 <p class="animate__animated animate__fadeInUp">Poem and so on ween our children to know poem and once opon time story </p>
                 <div>
-                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
+                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">talent </a>
                     <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
                 </div>
               </div>
@@ -440,7 +440,7 @@
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="icofont-envelope"></i>
               <h4>Email Rwanda :</h4>
-              <p>inamazose@gmail.com</p>
+              <p>inamazose@gmail.com/ info@yanjye.com</p>
               <h4>Email Kenya :</h4>
               <p>ndabadidi1@gmail.com</p>
             </div>

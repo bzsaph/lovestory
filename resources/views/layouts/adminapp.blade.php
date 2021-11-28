@@ -9,7 +9,7 @@
     <meta name="description" content="Bazimya saphani">
     <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/favicon.ico')}}">
-    <title>Lovestory dashboard</title>
+    <title>Impano dashboard</title>
 
         @yield('title')
 

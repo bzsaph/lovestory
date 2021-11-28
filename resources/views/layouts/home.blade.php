@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Interesing story</title>
+  <title>Interesing impano</title>
   <meta content="bazimyas@gmail.com" name="descriptison">
   <meta content="" name="keywords">
 
@@ -42,7 +42,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light text-upper" ><a href="/"><span>Story advice</span></a></h1>
+        <h1 class="text-light text-upper" ><a href="/"><span>Impano yanjye</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="/"><img src="public/assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -69,8 +69,8 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-      <h3>story advice</h3>
-      <p> Story advice aims to help every body to write all read story with out any cost of charge but to help growing</p>
+      <h3>Impano yanjye</h3>
+      <p> Impano yanjye aims to help every one to write and read story with out any cost of charge but to help growing</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

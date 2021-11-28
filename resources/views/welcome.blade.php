@@ -28,7 +28,7 @@
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
-                <p class="animate__animated animate__fadeInUp">Impano it is the palece where every one can request to post his talent for free</p>
+                <p class="animate__animated animate__fadeInUp">Impano it is the place where every one can request to post his talent for free</p>
                 <div>
                     <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
                     <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
@@ -42,8 +42,8 @@
             <div class="carousel-background"><img src="{{ url('assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown">Past talent</h2>
-                <p class="animate__animated animate__fadeInUp">Poem and so on ween our children to know poem and once opon time story </p>
+                <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
+                <p class="animate__animated animate__fadeInUp">Impano it is the place where every one can request to post his talent for free</p>
                 <div>
                     <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">talent </a>
                     <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>

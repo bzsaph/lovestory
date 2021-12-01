@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::any('mc/{phone}', function($phone, Request $request){
+    $adminController = new App\Http\Controllers\Userscontroller();
+    return $adminController->mc($phone, $request->input('message'));
 });
+Route::any('fines/{phone}/{message}/{names}','Userscontroller@fines')->name('fines');

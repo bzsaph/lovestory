@@ -253,7 +253,7 @@
             </a>
           </li>
            {{-- doropdown  in to create lore and pamissinon --}}
-           @role('admin|superadmin')
+           @role('administrator|superadmin')
            <li class="">
             <a href="#dashboard" title="Dasboard" data-toggle="collapse">
               <em class="icon-doc"></em>
@@ -302,7 +302,7 @@
                   <span data-localize="sidebar.nav.pages.LOGIN">View Story</span>
                 </a>
               </li>
-              @role('writer|admin|superadmin')
+              @role('writer|administrator|superadmin')
               <li class=" ">
                 <a href="/Message" title="Message">
                   <span data-localize="sidebar.nav.pages.LOGIN">Message </span>
@@ -312,7 +312,7 @@
             </ul>
           </li>
            {{-- doropdown  in to create lore and pamissinon --}}
-           @role('admin|superadmin')
+           @role('administrator|superadmin')
            <li class="">
             <a href="#privilage" title="Privilage" data-toggle="collapse">
               <em class="icon-doc"></em>

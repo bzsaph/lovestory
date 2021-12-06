@@ -1,7 +1,7 @@
 @extends('layouts.adminapp')
 @section('content')
  <!-- Main section-->
- <section  >
+ <section class="section-container">
     <div class="container">
         <h2>message from users</h2>
 

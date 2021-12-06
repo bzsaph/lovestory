@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class Userscontroller extends Controller
 {
@@ -96,50 +98,7 @@ class Userscontroller extends Controller
        return view('admin.commentmessage',compact('message'));
     }
 
-    public function mc($phone,$message)
-    {
-        $message = urlencode(urldecode($message));
-        $names="M-Clearance";
-        $urlsms="http://mc.gov.rw:8778/cgi-bin/sendsms?smsc=mtn&username=sms&password=sms&to=25$phone&text=$message&from=$names";
 
-        try{
-            $response = file_get_contents($urlsms);
-
-        }catch(\Throwable $e){
-
-
-            Log::error("SMS can not be sent to $phone $message");
-        }
-        return response("saved success full")->header('Content-Type', 'text/plain');
-    }
-
-    public function fines($phone,$message,$names)
-    {
-        $message = urlencode(urldecode($message));
-
-        if (!empty($phone)||!empty($messages)||!empty($names) ) {
-
-            $smsfines="http://197.243.109.238:13013/cgi-bin/sendsms?username=sms&password=sms&smsc=airtel&from=$names&to=25$phone&text=$message";
-
-            try{
-                $response = file_get_contents($smsfines);
-
-
-
-
-
-            }catch(\Throwable $e){
-
-                Log::error("SMS can not be sent to $phone $message");
-            }
-            return response("saved success full")->header('Content-Type', 'text/plain');
-        }else{
-
-        // $urlsms="http://mc.gov.rw:8778/cgi-bin/sendsms?smsc=mtn&username=sms&password=sms&to=25$phone&text=$message&from=$names";
-        return response("not sented")->header('Content-Type', 'text/plain');
-
-         }
-    }
 }
 
 

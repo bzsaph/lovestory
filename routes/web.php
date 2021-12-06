@@ -29,3 +29,22 @@ Route::post('/postcategory', 'Userscontroller@postcategory');
 Route::post('/suggestion', 'Userscontroller@suggestion');
 Route::get('/still', 'Userscontroller@still');
 Route::get('/Message', 'Userscontroller@Messages');
+Route::get('/newrole', 'HomeController@newrole');
+Route::get('/setting', 'HomeController@setting');
+Route::post('/postpermission', 'HomeController@postpermission');
+Route::post('/postrole', 'HomeController@postrole');
+Route::get('/viewstory', 'HomeController@viewstory');
+Route::get('/newuser', 'HomeController@newuser');
+Route::post('admin/newuser', 'HomeController@storenewuser');
+Route::get('all/user', 'HomeController@alluser');
+Route::get('/edituser/{id}','HomeController@edituser');
+Route::any('/admin/updateuser', 'HomeController@updateuser');
+Route::post('/roleupdate/{id}', 'HomeController@roleupdate');
+
+
+
+
+
+
+
+

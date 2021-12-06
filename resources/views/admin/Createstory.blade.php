@@ -1,7 +1,7 @@
 @extends('layouts.adminapp')
 @section('content')
  <!-- Main section-->
- <section  >
+ <section class="section-container">
     <!-- Page content-->
     <div class="content-wrapper">
         <div class="content-heading">
@@ -12,8 +12,10 @@
 
         <!-- START row-->
         <div class="row">
+            @can('edit articles')
             <div class="col-lg-12" >
                 <form class="form-horizontal" action="/submitstoror" method="POST">
+
                     @csrf
 
                     <!-- START card-->
@@ -68,6 +70,7 @@
                 </form>
             </div>
         </div>
+        @endcan
         <!-- END row-->
     </div>
 </section>

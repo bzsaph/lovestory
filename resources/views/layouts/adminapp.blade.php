@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Bazimya saphani">
     <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/img/favicon.ico')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/product/logo.png') }}">
     <title>Impano dashboard</title>
 
         @yield('title')
@@ -42,6 +42,8 @@
 
     <!-- =============== APP STYLES ===============-->
     <link rel="stylesheet" href="{{ url('assets/admin/css/app.css')}}" id="maincss">
+    <link rel="stylesheet" href="{{ url('assets/admin/css/alertbuton.css')}}" id="maincss">
+
     {{-- <link rel="stylesheet" href="{{ url('assets/admin/css/summernote.css')}}" id="maincss"> --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -77,10 +79,10 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#/">
               <div class="brand-logo">
-                <img class="img-fluid" src="{{ url('assets/home/img/favicon.png')}}" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
               </div>
               <div class="brand-logo-collapsed">
-                <img class="img-fluid" src="{{ url('assets/home/img/favicon.png')}}" alt="App Logo">
+                <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
               </div>
             </a>
           </div>
@@ -215,10 +217,10 @@
         <!-- END Top Navbar-->
       </header>
   <!-- sidebar-->
-  <aside class="aside-container">
+  <aside class="aside-container" style="background:rgba(27, 24, 24, 0.849) !important">
     <!-- START Sidebar (left)-->
     <div class="aside-inner">
-      <nav class="sidebar" data-sidebar-anyclick-close="">
+      <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgba(27, 24, 24, 0.849) !important">
         <!-- START sidebar nav-->
         <ul class="sidebar-nav">
           <!-- START user info-->
@@ -242,41 +244,95 @@
           </li>
           <!-- END user info-->
           <!-- Iterates over all sidebar items-->
-          <li class="nav-heading ">
-            <span data-localize="sidebar.heading.HEADER">Main Navigation</span>
-          </li>
-          <li class=" ">
-            <a href="/home" title="Dashboard" data-toggle="collapse">
 
-              <span data-localize="sidebar.nav.DASHBOARD">Dashboard</span>
+
+
+          <li class=" ">
+            <a href="/home" title="Widgets">
+              <span data-localize="sidebar.nav.WIDGETS"></span>
+            </a>
+          </li>
+           {{-- doropdown  in to create lore and pamissinon --}}
+           @role('admin|superadmin')
+           <li class="">
+            <a href="#dashboard" title="Dasboard" data-toggle="collapse">
+              <em class="icon-doc"></em>
+              <span data-localize="sidebar.nav.pages.PAGES">Dasboard</span>
             </a>
             <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
-              <li class="sidebar-subnav-header">Dashboard</li>
-              <li class=" active">
-                <a href="/home" title="Dashboard v1">
-                  <span>Dashboard</span>
+              <li class="sidebar-subnav-header">Dasboard</li>
+              <li class=" ">
+                <a href="/home" title="Dasboard">
+                  <span data-localize="sidebar.nav.pages.LOGIN">Dasboard</span>
                 </a>
               </li>
-
-
+              <li class=" ">
+                <a href="/newuser" title="Dasboard">
+                  <span data-localize="sidebar.nav.pages.LOGIN">New user</span>
+                </a>
+              </li>
+              <li class=" ">
+                <a href="/all/user" title="user">
+                  <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
+                </a>
+              </li>
             </ul>
           </li>
-          <li class=" ">
-            <a href="/Createstory" title="Widgets">
-
-              <span data-localize="sidebar.nav.WIDGETS">Create story</span>
+          @endrole
+          {{-- end of the dashord part --}}
+          <li class="">
+            <a href="#story" title="Post" data-toggle="collapse">
+              <em class="icon-doc"></em>
+              <span data-localize="sidebar.nav.pages.PAGES">Post </span>
             </a>
+            <ul class="sidebar-nav sidebar-subnav collapse" id="story">
+              <li class="sidebar-subnav-header">Post</li>
+              <li class=" ">
+                <a href="/Createstory" title="New Story">
+                  <span data-localize="sidebar.nav.pages.LOGIN">New Story</span>
+                </a>
+              </li>
+              <li class=" ">
+                <a href="/createcategory" title="New category">
+                  <span data-localize="sidebar.nav.pages.LOGIN">New category</span>
+                </a>
+              </li>
+              <li class=" ">
+                <a href="/viewstory" title="New category">
+                  <span data-localize="sidebar.nav.pages.LOGIN">View Story</span>
+                </a>
+              </li>
+              @role('writer|admin|superadmin')
+              <li class=" ">
+                <a href="/Message" title="Message">
+                  <span data-localize="sidebar.nav.pages.LOGIN">Message </span>
+                </a>
+              </li>
+             @endrole
+            </ul>
           </li>
-          <li class=" ">
-            <a href="/createcategory" title="Widgets">
-              <span data-localize="sidebar.nav.WIDGETS">Create category</span>
+           {{-- doropdown  in to create lore and pamissinon --}}
+           @role('admin|superadmin')
+           <li class="">
+            <a href="#privilage" title="Privilage" data-toggle="collapse">
+              <em class="icon-doc"></em>
+              <span data-localize="sidebar.nav.pages.PAGES">Privilage</span>
             </a>
+            <ul class="sidebar-nav sidebar-subnav collapse" id="privilage">
+              <li class="sidebar-subnav-header">Privilage</li>
+              <li class=" ">
+                <a href="/newrole" title="New Role">
+                  <span data-localize="sidebar.nav.pages.LOGIN">New Role</span>
+                </a>
+              </li>
+              <li class=" ">
+                <a href="/setting" title="permission">
+                  <span>setting</span>
+                </a>
+              </li>
+            </ul>
           </li>
-          <li class=" ">
-            <a href="/Message" title="Widgets">
-              <span data-localize="sidebar.nav.WIDGETS">comment message</span>
-            </a>
-          </li>
+          @endrole
           {{-- <li class=" ">
             <a href="#layout" title="Layouts" data-toggle="collapse">
               <em class="icon-layers"></em>
@@ -821,17 +877,16 @@
         </ul>
         <!-- END sidebar nav-->
       </nav>
+
     </div>
     <!-- END Sidebar (left)-->
   </aside>
   <!-- offsidebar-->
-  <aside class="offsidebar d-none">
-    <!-- START Off Sidebar (right)-->
 
-    <!-- END Off Sidebar (right)-->
-  </aside>
   <div class="container">
+
     @yield('content')
+
 </div>
   <!-- Main section-->
  <!-- Page footer-->

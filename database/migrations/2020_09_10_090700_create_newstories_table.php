@@ -15,10 +15,12 @@ class CreateNewstoriesTable extends Migration
     {
         Schema::create('newstories', function (Blueprint $table) {
             $table->id();
-            $table->string('Use_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('Title');
             $table->longText('Description');
             $table->string('Category');
+
             $table->string('Delete')->default('0');
             $table->timestamps();
         });

@@ -40,6 +40,9 @@ Route::get('all/user', 'HomeController@alluser');
 Route::get('/edituser/{id}','HomeController@edituser');
 Route::any('/admin/updateuser', 'HomeController@updateuser');
 Route::post('/roleupdate/{id}', 'HomeController@roleupdate');
+Route::get('/newproduct', 'HomeController@newproduct');
+Route::post('/postnewproduct', 'HomeController@postnewproduct');
+
 
 
 

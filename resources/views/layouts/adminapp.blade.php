@@ -335,21 +335,23 @@
                             </ul>
                         </li>
                     @endrole
-                        {{-- <li class=" ">
-            <a href="#layout" title="Layouts" data-toggle="collapse">
-              <em class="icon-layers"></em>
-              <span>Layouts</span>
-            </a>
-            <ul class="sidebar-nav sidebar-subnav collapse" id="layout">
-              <li class="sidebar-subnav-header">Layouts</li>
-              <li class=" ">
-                <a href="dashboard_h.html" title="Horizontal">
-                  <span>Horizontal</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-heading ">
+                    @role('writer|administrator|superadmin')
+                     <li class=" ">
+                        <a href="#layout" title="Layouts" data-toggle="collapse">
+                        <em class="icon-layers"></em>
+                        <span>Uplad product</span>
+                        </a>
+                        <ul class="sidebar-nav sidebar-subnav collapse" id="layout">
+                        <li class="sidebar-subnav-header">Layouts</li>
+                        <li class=" ">
+                            <a href="/newproduct" title="New product">
+                            <span>Upload new product</span>
+                            </a>
+                        </li>
+                        </ul>
+                    </li>
+                    @endrole
+           {{--<li class="nav-heading ">
             <span data-localize="sidebar.heading.COMPONENTS">Components</span>
           </li>
           <li class=" ">

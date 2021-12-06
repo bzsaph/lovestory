@@ -481,8 +481,8 @@
     </div>
   </section>
 @else
-<button type="button" class="btn btn-primary rounded mx-auto d-block">
-    Wecome to the system dear <span class="badge badge-light">{{ Auth::user()->name}}</span>
+<button type="button" class="btn btn-primary rounded mx-auto d-block" >
+    Wecome to the system dear <span class="badge badge-light"  title="view-dashboard" >{{ Auth::user()->name}}</span>
 
 
 <br><br>

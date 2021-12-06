@@ -6,6 +6,7 @@ use App\Category;
 use App\Comment;
 use App\User;
 use App\Newstory;
+use App\Productforsel;
 use App\suggestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -90,7 +91,9 @@ class Userscontroller extends Controller
     }
     public function still()
     {
-       return view('still');
+        $product  = DB::table('productforsels')->where([['stutas', "1"]])->orderBy('id','desc')->get();
+       return view('still' ,compact('product'));
+
     }
     public function Messages()
     {

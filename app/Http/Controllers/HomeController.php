@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Newstory;
+use App\Productforsel;
 use App\User as AppUser;
 use Illuminate\Foundation\Auth\User as AuthUser;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Log;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use App\User;
-
+use Image;
 
 class HomeController extends Controller
 {
@@ -205,7 +206,45 @@ public function roleupdate(Request $request,$id)
         Session::flash('message', "User created successfull");
         return Redirect::back();
     }
+    }
+    public function newproduct()
+    {
+      return view('admin\product\newproduct');
+    }
+    public function postnewproduct(Request $request)
+    {
+        $validatedData = $request->validate([
+            'pname' => ['required', 'string', 'max:255'],
+            'pcategory' => ['required', 'string', 'max:255'],
+            'ptitle' =>['required', 'string', 'max:255'],
+            'pdiscription' =>['required', 'string'],
+            'image'  => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+        $newproduct = new Productforsel();
+        
 
+        $image = $request->file('image');
+       $imagename= $input['imagename'] = time().'.'.$image->extension();
+        $destinationPath = public_path('/thumbnail');
+        $img = Image::make($image->path());
+
+        $img->resize(500, 500, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$input['imagename']);
+
+        $newproduct = new Productforsel();
+        $newproduct->pname=$request->pname;
+        $newproduct->pcategory=$request->pcategory;
+        $newproduct->ptitle=$request->ptitle;
+        $newproduct->pdiscription=$request->pdiscription;
+        $newproduct->image=$imagename;
+        $newproduct->user_id=Auth::user()->id;
+        $newproduct->save();
+
+        Session::flash('message', "User created successfull");
+        return Redirect::back();
+
+    }
 }
 
-}
+

@@ -1,5 +1,6 @@
 @extends('layouts.adminapp')
 @section('content')
+@can('view-dashboard')
 <section class="section-container">
     <!-- Page content-->
     <div class="content-wrapper">
@@ -193,7 +194,7 @@
                 <div class="card-header">
                   <div class="px-2 float-right badge badge-danger">5</div>
                   <div class="px-2 mr-2 float-right badge badge-success">12</div>
-                  
+
                 </div>
                 <!-- START list group-->
                 <div class="list-group" data-height="180" data-scrollable="">
@@ -479,5 +480,14 @@
       </div>
     </div>
   </section>
+@else
+<button type="button" class="btn btn-primary rounded mx-auto d-block">
+    Wecome to the system dear <span class="badge badge-light">{{ Auth::user()->name}}</span>
+
+
+<br><br>
+You don't have permission to view this Dashboard
+</button>
+@endcan
 
 @endsection

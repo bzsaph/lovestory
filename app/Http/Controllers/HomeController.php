@@ -141,6 +141,8 @@ public function viewstory()
 public function newuser()
 {
     $roles =Role::all();
+
+
     return view('admin.createnewuser',compact('roles'));
 }
 public function alluser()

@@ -11,7 +11,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/product/logo.png') }}">
     <title>Impano dashboard</title>
 
-        @yield('title')
+    @yield('title')
 
     <!-- =============== VENDOR STYLES ===============-->
     <!-- FONT AWESOME-->
@@ -32,13 +32,13 @@
     <link rel="stylesheet" href="{{ url('assets/admin/css/bootstrap.css')}}" id="bscss">
 
     <!-- Datatables-->
-	<link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
-	<link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-keytable-bs/css/keyTable.bootstrap.css')}}">
-	<link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-keytable-bs/css/keyTable.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.css')}}">
     <!-- =============== BOOTSTRAP STYLES ===============-->
-     <!-- Dropzone-->
-   <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/basic.css')}}">
-   <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/dropzone.css')}}">
+    <!-- Dropzone-->
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/basic.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/dropzone.css')}}">
 
     <!-- =============== APP STYLES ===============-->
     <link rel="stylesheet" href="{{ url('assets/admin/css/app.css')}}" id="maincss">
@@ -48,7 +48,7 @@
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
-        button[data-name=resizedDataImage]  {
+        button[data-name=resizedDataImage] {
             position: relative;
             overflow: hidden;
         }
@@ -65,275 +65,277 @@
             direction: ltr;
             cursor: pointer;
         }
+
     </style>
 
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="wrapper">
-      <!-- top navbar-->
-      <header class="topnavbar-wrapper">
-        <!-- START Top Navbar-->
-        <nav class="navbar topnavbar">
-          <!-- START navbar header-->
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#/">
-              <div class="brand-logo">
-                <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
-              </div>
-              <div class="brand-logo-collapsed">
-                <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
-              </div>
-            </a>
-          </div>
-          <!-- END navbar header-->
-          <!-- START Left navbar-->
-          <ul class="navbar-nav mr-auto flex-row">
-            <li class="nav-item">
-              <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
-              <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
-                <em class="fas fa-bars"></em>
-              </a>
-              <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
-              <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
-                <em class="fas fa-bars"></em>
-              </a>
-            </li>
-            <!-- START User avatar toggle-->
-            <li class="nav-item d-none d-md-block">
-              <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
-              <a class="nav-link" id="user-block-toggle" href="#user-block" data-toggle="collapse">
-                <em class="icon-user"></em>
-              </a>
-            </li>
-            <!-- END User avatar toggle-->
-            <!-- START lock screen-->
-            <li class="nav-item d-none d-md-block">
-              <a class="nav-link" title="Logout"href="{{ route('logout') }}"onclick="event.preventDefault();
+        <!-- top navbar-->
+        <header class="topnavbar-wrapper">
+            <!-- START Top Navbar-->
+            <nav class="navbar topnavbar">
+                <!-- START navbar header-->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">
+                        <div class="brand-logo">
+                            <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
+                        </div>
+                        <div class="brand-logo-collapsed">
+                            <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
+                        </div>
+                    </a>
+                </div>
+                <!-- END navbar header-->
+                <!-- START Left navbar-->
+                <ul class="navbar-nav mr-auto flex-row">
+                    <li class="nav-item">
+                        <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                        <a class="nav-link d-none d-md-block d-lg-block d-xl-block" href="#" data-trigger-resize="" data-toggle-state="aside-collapsed">
+                            <em class="fas fa-bars"></em>
+                        </a>
+                        <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                        <a class="nav-link sidebar-toggle d-md-none" href="#" data-toggle-state="aside-toggled" data-no-persist="true">
+                            <em class="fas fa-bars"></em>
+                        </a>
+                    </li>
+                    <!-- START User avatar toggle-->
+                    <li class="nav-item d-none d-md-block">
+                        <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                        <a class="nav-link" id="user-block-toggle" href="#user-block" data-toggle="collapse">
+                            <em class="icon-user"></em>
+                        </a>
+                    </li>
+                    <!-- END User avatar toggle-->
+                    <!-- START lock screen-->
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" title="Logout" href="{{ route('logout') }}" onclick="event.preventDefault();
                               document.getElementById('logout-form').submit();">
-                 <em class="icon-lock"></em> {{ __('Logout') }}
-             </a>
-             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                @csrf
-            </form>
-            </li>
-            <!-- END lock screen-->
-          </ul>
-          <!-- END Left navbar-->
-          <!-- START Right Navbar-->
-          <ul class="navbar-nav flex-row">
-            <!-- Search icon-->
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-search-open="">
-                <em class="icon-magnifier"></em>
-              </a>
-            </li>
-            <!-- Fullscreen (only desktops)-->
-            <li class="nav-item d-none d-md-block">
-              <a class="nav-link" href="#" data-toggle-fullscreen="">
-                <em class="fas fa-expand"></em>
-              </a>
-            </li>
-            <!-- START Alert menu-->
-            <li class="nav-item dropdown dropdown-list">
-              <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
-                <em class="icon-bell"></em>
-                <span class="badge badge-danger">11</span>
-              </a>
-              <!-- START Dropdown menu-->
-              <div class="dropdown-menu dropdown-menu-right animated flipInX">
-                <div class="dropdown-item">
-                  <!-- START list group-->
-                  <div class="list-group">
-                    <!-- list item-->
-                    <div class="list-group-item list-group-item-action">
-                      <div class="media">
-                        <div class="align-self-start mr-2">
-                          <em class="fab fa-twitter fa-2x text-info"></em>
+                            <em class="icon-lock"></em> {{ __('Logout') }}
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </li>
+                    <!-- END lock screen-->
+                </ul>
+                <!-- END Left navbar-->
+                <!-- START Right Navbar-->
+                <ul class="navbar-nav flex-row">
+                    <!-- Search icon-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-search-open="">
+                            <em class="icon-magnifier"></em>
+                        </a>
+                    </li>
+                    <!-- Fullscreen (only desktops)-->
+                    <li class="nav-item d-none d-md-block">
+                        <a class="nav-link" href="#" data-toggle-fullscreen="">
+                            <em class="fas fa-expand"></em>
+                        </a>
+                    </li>
+                    <!-- START Alert menu-->
+                    <li class="nav-item dropdown dropdown-list">
+                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
+                            <em class="icon-bell"></em>
+                            <span class="badge badge-danger">11</span>
+                        </a>
+                        <!-- START Dropdown menu-->
+                        <div class="dropdown-menu dropdown-menu-right animated flipInX">
+                            <div class="dropdown-item">
+                                <!-- START list group-->
+                                <div class="list-group">
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fab fa-twitter fa-2x text-info"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">New followers</p>
+                                                <p class="m-0 text-muted text-sm">1 new follower</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fas fa-envelope fa-2x text-warning"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">New e-mails</p>
+                                                <p class="m-0 text-muted text-sm">You have 10 new emails</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <div class="media">
+                                            <div class="align-self-start mr-2">
+                                                <em class="fas fa-tasks fa-2x text-success"></em>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="m-0">Pending Tasks</p>
+                                                <p class="m-0 text-muted text-sm">11 pending task</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- last list item-->
+                                    <div class="list-group-item list-group-item-action">
+                                        <span class="d-flex align-items-center">
+                                            <span class="text-sm">More notifications</span>
+                                            <span class="badge badge-danger ml-auto">14</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- END list group-->
+                            </div>
                         </div>
-                        <div class="media-body">
-                          <p class="m-0">New followers</p>
-                          <p class="m-0 text-muted text-sm">1 new follower</p>
-                        </div>
-                      </div>
+                        <!-- END Dropdown menu-->
+                    </li>
+                    <!-- END Alert menu-->
+                    <!-- START Offsidebar button-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
+                            <em class="icon-notebook"></em>
+                        </a>
+                    </li>
+                    <!-- END Offsidebar menu-->
+                </ul>
+                <!-- END Right Navbar-->
+                <!-- START Search form-->
+                <form class="navbar-form" role="search" action="http://themicon.co/theme/angle/v4.0/static-html/app/search.html">
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Type and hit enter ...">
+                        <div class="fas fa-times navbar-form-close" data-search-dismiss=""></div>
                     </div>
-                    <!-- list item-->
-                    <div class="list-group-item list-group-item-action">
-                      <div class="media">
-                        <div class="align-self-start mr-2">
-                          <em class="fas fa-envelope fa-2x text-warning"></em>
-                        </div>
-                        <div class="media-body">
-                          <p class="m-0">New e-mails</p>
-                          <p class="m-0 text-muted text-sm">You have 10 new emails</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- list item-->
-                    <div class="list-group-item list-group-item-action">
-                      <div class="media">
-                        <div class="align-self-start mr-2">
-                          <em class="fas fa-tasks fa-2x text-success"></em>
-                        </div>
-                        <div class="media-body">
-                          <p class="m-0">Pending Tasks</p>
-                          <p class="m-0 text-muted text-sm">11 pending task</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- last list item-->
-                    <div class="list-group-item list-group-item-action">
-                      <span class="d-flex align-items-center">
-                                 <span class="text-sm">More notifications</span>
-                      <span class="badge badge-danger ml-auto">14</span>
-                      </span>
-                    </div>
-                  </div>
-                  <!-- END list group-->
-                </div>
-              </div>
-              <!-- END Dropdown menu-->
-            </li>
-            <!-- END Alert menu-->
-            <!-- START Offsidebar button-->
-            <li class="nav-item">
-              <a class="nav-link" href="#" data-toggle-state="offsidebar-open" data-no-persist="true">
-                <em class="icon-notebook"></em>
-              </a>
-            </li>
-            <!-- END Offsidebar menu-->
-          </ul>
-          <!-- END Right Navbar-->
-          <!-- START Search form-->
-          <form class="navbar-form" role="search" action="http://themicon.co/theme/angle/v4.0/static-html/app/search.html">
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Type and hit enter ...">
-              <div class="fas fa-times navbar-form-close" data-search-dismiss=""></div>
-            </div>
-            <button class="d-none" type="submit">Submit</button>
-          </form>
-          <!-- END Search form-->
-        </nav>
-        <!-- END Top Navbar-->
-      </header>
-  <!-- sidebar-->
-  <aside class="aside-container" style="background:rgba(27, 24, 24, 0.849) !important">
-    <!-- START Sidebar (left)-->
-    <div class="aside-inner">
-      <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgba(27, 24, 24, 0.849) !important">
-        <!-- START sidebar nav-->
-        <ul class="sidebar-nav">
-          <!-- START user info-->
-          <li class="has-user-block">
-            <div class="collapse" id="user-block">
-              <div class="item user-block">
-                <!-- User picture-->
-                <div class="user-block-picture">
-                  <div class="user-block-status">
-                    <img class="img-thumbnail rounded-circle" src="{{ url('/assets/home/img/apple-touch-icon.png')}}" alt="Avatar" width="60" height="60">
-                    <div class="circle bg-success circle-lg"></div>
-                  </div>
-                </div>
-                <!-- Name and Job-->
-                <div class="user-block-info">
-                  <span class="user-block-name">{{Auth::user()->name}}</span>
-                  {{-- <span class="user-block-role">Designer</span> --}}
-                </div>
-              </div>
-            </div>
-          </li>
-          <!-- END user info-->
-          <!-- Iterates over all sidebar items-->
+                    <button class="d-none" type="submit">Submit</button>
+                </form>
+                <!-- END Search form-->
+            </nav>
+            <!-- END Top Navbar-->
+        </header>
+        <!-- sidebar-->
+        <aside class="aside-container" style="background:rgba(27, 24, 24, 0.849) !important">
+            <!-- START Sidebar (left)-->
+            <div class="aside-inner">
+                <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgba(27, 24, 24, 0.849) !important">
+                    <!-- START sidebar nav-->
+                    <ul class="sidebar-nav">
+                        <!-- START user info-->
+                        <li class="has-user-block">
+                            <div class="collapse" id="user-block">
+                                <div class="item user-block">
+                                    <!-- User picture-->
+                                    <div class="user-block-picture">
+                                        <div class="user-block-status">
+                                            <img class="img-thumbnail rounded-circle" src="{{ url('/assets/home/img/apple-touch-icon.png')}}" alt="Avatar" width="60" height="60">
+                                            <div class="circle bg-success circle-lg"></div>
+                                        </div>
+                                    </div>
+                                    <!-- Name and Job-->
+                                    <div class="user-block-info">
+                                        <span class="user-block-name">{{Auth::user()->name}}</span>
+                                        {{-- <span class="user-block-role">Designer</span> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- END user info-->
+                        <!-- Iterates over all sidebar items-->
 
 
 
-          <li class=" ">
-            <a href="/home" title="Widgets">
-              <span data-localize="sidebar.nav.WIDGETS"></span>
-            </a>
-          </li>
-           {{-- doropdown  in to create lore and pamissinon --}}
-           @role('administrator|superadmin')
-           <li class="">
-            <a href="#dashboard" title="Dasboard" data-toggle="collapse">
-              <em class="icon-doc"></em>
-              <span data-localize="sidebar.nav.pages.PAGES">Dasboard</span>
-            </a>
-            <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
-              <li class="sidebar-subnav-header">Dasboard</li>
-              <li class=" ">
-                <a href="/home" title="Dasboard">
-                  <span data-localize="sidebar.nav.pages.LOGIN">Dasboard</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="/newuser" title="Dasboard">
-                  <span data-localize="sidebar.nav.pages.LOGIN">New user</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="/all/user" title="user">
-                  <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          @endrole
-          {{-- end of the dashord part --}}
-          <li class="">
-            <a href="#story" title="Post" data-toggle="collapse">
-              <em class="icon-doc"></em>
-              <span data-localize="sidebar.nav.pages.PAGES">Post </span>
-            </a>
-            <ul class="sidebar-nav sidebar-subnav collapse" id="story">
-              <li class="sidebar-subnav-header">Post</li>
-              <li class=" ">
-                <a href="/Createstory" title="New Story">
-                  <span data-localize="sidebar.nav.pages.LOGIN">New Story</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="/createcategory" title="New category">
-                  <span data-localize="sidebar.nav.pages.LOGIN">New category</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="/viewstory" title="New category">
-                  <span data-localize="sidebar.nav.pages.LOGIN">View Story</span>
-                </a>
-              </li>
-              @role('writer|administrator|superadmin')
-              <li class=" ">
-                <a href="/Message" title="Message">
-                  <span data-localize="sidebar.nav.pages.LOGIN">Message </span>
-                </a>
-              </li>
-             @endrole
-            </ul>
-          </li>
-           {{-- doropdown  in to create lore and pamissinon --}}
-           @role('administrator|superadmin')
-           <li class="">
-            <a href="#privilage" title="Privilage" data-toggle="collapse">
-              <em class="icon-doc"></em>
-              <span data-localize="sidebar.nav.pages.PAGES">Privilage</span>
-            </a>
-            <ul class="sidebar-nav sidebar-subnav collapse" id="privilage">
-              <li class="sidebar-subnav-header">Privilage</li>
-              <li class=" ">
-                <a href="/newrole" title="New Role">
-                  <span data-localize="sidebar.nav.pages.LOGIN">New Role</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="/setting" title="permission">
-                  <span>setting</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-          @endrole
-          {{-- <li class=" ">
+                        <li class=" ">
+                            <a href="/home" title="Widgets">
+                                <span data-localize="sidebar.nav.WIDGETS"></span>
+                            </a>
+                        </li>
+                        {{-- doropdown  in to create lore and pamissinon --}}
+                        @role('administrator|superadmin')
+                        <li class="">
+                            <a href="#dashboard" title="Dasboard" data-toggle="collapse">
+                                <em class="icon-doc"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES">Dasboard</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
+                                <li class="sidebar-subnav-header">Dasboard</li>
+                                <li class=" ">
+                                    <a href="/home" title="Dasboard">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">Dasboard</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/newuser" title="Dasboard">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New user</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/all/user" title="user">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        @endrole
+                        {{-- end of the dashord part --}}
+                        @role('writer|administrator|superadmin')
+                        <li class="">
+                            <a href="#story" title="Post" data-toggle="collapse">
+                                <em class="icon-doc"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES">Post </span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="story">
+                                <li class="sidebar-subnav-header">Post</li>
+                                <li class=" ">
+                                    <a href="/Createstory" title="New Story">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New Story</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/createcategory" title="New category">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New category</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/viewstory" title="New category">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">View Story</span>
+                                    </a>
+                                </li>
+
+                                <li class=" ">
+                                    <a href="/Message" title="Message">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">Message </span>
+                                    </a>
+                                </li>
+                                @endrole
+                            </ul>
+                        </li>
+                        {{-- doropdown  in to create lore and pamissinon --}}
+                    @role('administrator|superadmin')
+                        <li class="">
+                            <a href="#privilage" title="Privilage" data-toggle="collapse">
+                                <em class="icon-doc"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES">Privilage</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="privilage">
+                                <li class="sidebar-subnav-header">Privilage</li>
+                                <li class=" ">
+                                    <a href="/newrole" title="New Role">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New Role</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/setting" title="permission">
+                                        <span>setting</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    @endrole
+                        {{-- <li class=" ">
             <a href="#layout" title="Layouts" data-toggle="collapse">
               <em class="icon-layers"></em>
               <span>Layouts</span>
@@ -874,25 +876,25 @@
               </li>
             </ul>
           </li> --}}
-        </ul>
-        <!-- END sidebar nav-->
-      </nav>
+                    </ul>
+                    <!-- END sidebar nav-->
+                </nav>
 
-    </div>
-    <!-- END Sidebar (left)-->
-  </aside>
-  <!-- offsidebar-->
+            </div>
+            <!-- END Sidebar (left)-->
+        </aside>
+        <!-- offsidebar-->
 
-  <div class="container">
+        <div class="container">
 
-    @yield('content')
+            @yield('content')
 
-</div>
-  <!-- Main section-->
- <!-- Page footer-->
-      <footer class="footer-container">
-        <span>&copy; yanjye limited</span>
-      </footer>
+        </div>
+        <!-- Main section-->
+        <!-- Page footer-->
+        <footer class="footer-container">
+            <span>&copy; yanjye limited</span>
+        </footer>
     </div>
     <!-- =============== VENDOR SCRIPTS ===============-->
     <!-- MODERNIZR-->
@@ -902,11 +904,11 @@
     <!-- BOOTSTRAP-->
     <script src="{{ url('assets/admin/vendor/popper.js/dist/umd/popper.js')}}"></script>
     <script src="{{ url('assets/admin/vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
-     <!-- CHART.JS-->
-   <script src="{{ url('assets/admin/vendor/chart.js/dist/Chart.js')}}"></script>
+    <!-- CHART.JS-->
+    <script src="{{ url('assets/admin/vendor/chart.js/dist/Chart.js')}}"></script>
 
-   <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-   {{-- <script src="{{ url('assets/admin/js/summernote.js')}}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    {{-- <script src="{{ url('assets/admin/js/summernote.js')}}"></script> --}}
 
 
     <!-- STORAGE API-->
@@ -936,22 +938,22 @@
     <script src="{{ url('assets/admin/vendor/easy-pie-chart/dist/jquery.easypiechart.js')}}"></script>
 
     <!-- Datatables-->
-	<script src="{{ url('assets/admin/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/dataTables.buttons.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.colVis.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.flash.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.html5.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.print.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-keytable/js/dataTables.keyTable.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-responsive/js/dataTables.responsive.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/jszip/dist/jszip.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/pdfmake/build/pdfmake.js')}}"></script>
-	<script src="{{ url('assets/admin/vendor/pdfmake/build/vfs_fonts.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/dataTables.buttons.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.colVis.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.flash.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.html5.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.print.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-keytable/js/dataTables.keyTable.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-responsive/js/dataTables.responsive.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jszip/dist/jszip.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/pdfmake/build/pdfmake.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/pdfmake/build/vfs_fonts.js')}}"></script>
 
-	<!-- =============== APP SCRIPTS ===============-->
+    <!-- =============== APP SCRIPTS ===============-->
     <!-- MOMENT JS-->
     <script src="{{ url('assets/admin/vendor/moment/min/moment-with-locales.js')}}"></script>
     <!-- =============== APP SCRIPTS ===============-->
@@ -960,8 +962,9 @@
 
 
 
-  </body>
+</body>
 
 
 <!-- Mirrored from themicon.co/theme/angle/v4.0/static-html/app/dashboard.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 20 Nov 2018 12:41:00 GMT -->
 </html>
+

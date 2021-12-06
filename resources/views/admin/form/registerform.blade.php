@@ -48,7 +48,7 @@
 
 <div class="form-group row">
 
-    @foreach ($roles as $role )
+    @foreach ($roles as $role)
     <div class="col-md-12" style="margin-left: 60px ">
         <input type="checkbox" value="{{$role->id}}" name="roles[]"
         @if(auth()->check())

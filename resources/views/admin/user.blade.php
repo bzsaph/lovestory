@@ -6,8 +6,8 @@
     <!-- Page content-->
     <div class="content-wrapper">
        <div class="content-heading">
-          <div>Welcome To Mess Attendences
-             <small>Download Data </small>
+          <div>All users in the system
+
           </div>
        </div>
        <div class="container-fluid">
@@ -16,8 +16,8 @@
           <!-- DATATABLE DEMO 2-->
           <div class="card"  >
              <div class="card-header">
-                <div class="card-title">Mess attendence</div>
-                <div class="text-sm">This is the list Of the people Who Attended The Mess </div>
+                <div class="card-title">All user </div>
+
 
 
              </div>
@@ -43,7 +43,7 @@
                         <td>{!! $item->email !!}</td>
                         <td>{{$item->created_at}}</td>
                         <td>
-                            <a href="/edituser/{{$item->id}}" class="btn btn-success" id="alert-success">Edit</a>
+                            @can('user-update')<a href="/edituser/{{$item->id}}" class="btn btn-success" id="alert-success">Edit</a>@endcan
                             {{-- <a href="" class="btn btn-danger" id="alert-error">Delete</a> --}}
                             {{-- <a href="" class="btn btn-warning" id="alert-warning">Warning</a> --}}
 

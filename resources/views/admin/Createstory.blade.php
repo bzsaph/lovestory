@@ -5,14 +5,14 @@
     <!-- Page content-->
     <div class="content-wrapper">
         <div class="content-heading">
-            <div>Where story goes
+            <div>New story
                 <small>insert story</small>
             </div>
         </div>
 
         <!-- START row-->
         <div class="row">
-            @can('edit articles')
+            @can('user-create')
             <div class="col-lg-12" >
                 <form class="form-horizontal" action="/submitstoror" method="POST">
 
@@ -70,6 +70,8 @@
                 </form>
             </div>
         </div>
+        @else
+        <p>You dont have parmission</p>
         @endcan
         <!-- END row-->
     </div>

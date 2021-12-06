@@ -209,7 +209,7 @@ public function roleupdate(Request $request,$id)
     }
     public function newproduct()
     {
-      return view('admin\product\newproduct');
+      return view('admin.product.newproduct');
     }
     public function postnewproduct(Request $request)
     {
@@ -221,7 +221,7 @@ public function roleupdate(Request $request,$id)
             'image'  => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $newproduct = new Productforsel();
-        
+
 
         $image = $request->file('image');
        $imagename= $input['imagename'] = time().'.'.$image->extension();

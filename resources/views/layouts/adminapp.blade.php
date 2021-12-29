@@ -314,7 +314,7 @@
                             </ul>
                         </li>
                         {{-- doropdown  in to create lore and pamissinon --}}
-                    @role('administrator|superadmin')
+                        @role('administrator|superadmin')
                         <li class="">
                             <a href="#privilage" title="Privilage" data-toggle="collapse">
                                 <em class="icon-doc"></em>
@@ -334,24 +334,24 @@
                                 </li>
                             </ul>
                         </li>
-                    @endrole
-                    @role('writer|administrator|superadmin')
-                     <li class=" ">
-                        <a href="#layout" title="Layouts" data-toggle="collapse">
-                        <em class="icon-layers"></em>
-                        <span>Uplad product</span>
-                        </a>
-                        <ul class="sidebar-nav sidebar-subnav collapse" id="layout">
-                        <li class="sidebar-subnav-header">Layouts</li>
+                        @endrole
+                        @role('writer|administrator|superadmin')
                         <li class=" ">
-                            <a href="/newproduct" title="New product">
-                            <span>Upload new product</span>
+                            <a href="#layout" title="Layouts" data-toggle="collapse">
+                                <em class="icon-layers"></em>
+                                <span>Uplad product</span>
                             </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="layout">
+                                <li class="sidebar-subnav-header">Layouts</li>
+                                <li class=" ">
+                                    <a href="/newproduct" title="New product">
+                                        <span>Upload new product</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        </ul>
-                    </li>
-                    @endrole
-           {{--<li class="nav-heading ">
+                        @endrole
+                        {{--<li class="nav-heading ">
             <span data-localize="sidebar.heading.COMPONENTS">Components</span>
           </li>
           <li class=" ">

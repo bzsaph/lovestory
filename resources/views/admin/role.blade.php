@@ -1,116 +1,118 @@
 @extends('layouts.adminapp')
 @section('content')
- <!-- Main section-->
- <section class="section-container">
+<!-- Main section-->
+<section class="section-container">
     <!-- Page content-->
     @if (Session::has('message'))
-    <div  class="btn btn-success" id="alert-success">{{ Session::get('message') }}</div>
-@endif
+    <div class="btn btn-success" id="alert-success">{{ Session::get('message') }}</div>
+    @endif
     <div class="row">
         <div class="col-md 6">
             <div class="content-wrapper ">
                 <div class="content-heading">
-                    <div > New Role</div>
+                    <div> New Role</div>
                 </div>
             </div>
         </div>
         <div class="col-md 6">
             <div class="content-wrapper ">
                 <div class="content-heading">
-                    <div > New Permission</div>
+                    <div> New Permission</div>
                 </div>
             </div>
         </div>
-</div>
-        <!-- START row-->
-        <div class="row">
+    </div>
+    <!-- START row-->
+    <div class="row">
 
-            <div class="col-lg-6" >
-                <form class="form-horizontal" action="/postrole" method="POST">
-                    @csrf
+        <div class="col-lg-6">
+            <form class="form-horizontal" action="/postrole" method="POST">
+                @csrf
 
-                    <!-- START card-->
-                    <div class="card card-default">
-                        <div class="bg-gray-lighter px-3 py-2 mb-3">Role</div>
-                        <div class="card-body">
+                <!-- START card-->
+                <div class="card card-default">
+                    <div class="bg-gray-lighter px-3 py-2 mb-3">Role</div>
+                    <div class="card-body">
 
-                            <fieldset>
+                        <fieldset>
 
-                                <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Name:</label>
-                                    <div class="col-md-9" style="margin-top: 10px">
-                                        <input class=" @error('name') is-invalid @enderror form-control" type="text" placeholder="Admin" name="name">
-                                    </div>
-                                    @error('name')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Name:</label>
+                                <div class="col-md-9" style="margin-top: 10px">
+                                    <input class=" @error('name') is-invalid @enderror form-control" type="text"
+                                        placeholder="Admin" name="name">
                                 </div>
+                                @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
 
 
-                            </fieldset>
+                        </fieldset>
 
 
-                        </div>
-                        <div class="card-footer text-center">
-                            <button  class="btn btn-info" id="alert-info" type="submit">Create role</button>
-                        </div>
                     </div>
-                    <!-- END card-->
-                </form>
-            </div>
-
-
-            <div class="col-lg-6" >
-                <form class="form-horizontal" action="/postpermission" method="POST">
-                    @csrf
-
-                    <!-- START card-->
-                    <div class="card card-default">
-                        <div class="bg-gray-lighter px-3 py-2 mb-3">Permission</div>
-                        <div class="card-body">
-
-                            <fieldset>
-
-                                <div class="form-group row">
-                                    <label class="col-md-3 col-form-label">Name:</label>
-                                    <div class="col-md-9" style="margin-top: 10px">
-                                        <input class=" @error('name') is-invalid @enderror form-control" type="text" placeholder="Edit artical" name="name">
-                                    </div>
-                                    @error('name')
-                                        <div class="alert alert-danger">{{ $message }}</div>
-                                    @enderror
-                                </div>
-
-
-                            </fieldset>
-
-
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-info" id="alert-info"type="submit">Create Permission</button>
-                        </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-info" id="alert-info" type="submit">Create role</button>
                     </div>
-                    <!-- END card-->
-                </form>
-            </div>
-
+                </div>
+                <!-- END card-->
+            </form>
         </div>
-        <!-- END row-->
-        <div class="row">
-            <div class="col-md 6">
-                <div class="content-wrapper ">
-                    <div class="content-heading">
-                        <div > New Role</div>
+
+
+        <div class="col-lg-6">
+            <form class="form-horizontal" action="/postpermission" method="POST">
+                @csrf
+
+                <!-- START card-->
+                <div class="card card-default">
+                    <div class="bg-gray-lighter px-3 py-2 mb-3">Permission</div>
+                    <div class="card-body">
+
+                        <fieldset>
+
+                            <div class="form-group row">
+                                <label class="col-md-3 col-form-label">Name:</label>
+                                <div class="col-md-9" style="margin-top: 10px">
+                                    <input class=" @error('name') is-invalid @enderror form-control" type="text"
+                                        placeholder="Edit artical" name="name">
+                                </div>
+                                @error('name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+
+                        </fieldset>
+
+
+                    </div>
+                    <div class="card-footer text-center">
+                        <button class="btn btn-info" id="alert-info" type="submit">Create Permission</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-md 6">
-                <div class="content-wrapper ">
-                    <div class="content-heading">
-                        <div > New Permission</div>
-                    </div>
+                <!-- END card-->
+            </form>
+        </div>
+
+    </div>
+    <!-- END row-->
+    <div class="row">
+        <div class="col-md 6">
+            <div class="content-wrapper ">
+                <div class="content-heading">
+                    <div> New Role</div>
                 </div>
             </div>
+        </div>
+        <div class="col-md 6">
+            <div class="content-wrapper ">
+                <div class="content-heading">
+                    <div> New Permission</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 

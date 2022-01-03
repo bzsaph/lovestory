@@ -195,13 +195,14 @@ public function roleupdate(Request $request,$id)
 {
     $role=Role::findById($id);
     $resurt= $role->hasPermissionTo($role);
+
     if($resurt == true){
         $role->syncPermissions($role);
         $role->givePermissionTo([$request->permissions]);
         Session::flash('message', "User created successfull");
         return Redirect::back();
     }else{
-
+        $role->syncPermissions($role);
         $role->givePermissionTo([$request->permissions]);
         Session::flash('message', "User created successfull");
         return Redirect::back();

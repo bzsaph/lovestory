@@ -21,8 +21,14 @@
         <div class="container">
 
 
-            <div class="row">
+            <div class="row"></div>
                 @foreach ($product as $avoilable )
+
+
+
+
+
+
                 <div class="col-sm-3">
                     <div class="card" style="width: 17rem;">
                         <img class="card-img-top " src="{{ url('thumbnail') }}/{{$avoilable->image}}" Style="width: 100%;height: 15vw; object-fit: cover;" alt="">

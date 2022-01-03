@@ -263,17 +263,17 @@
                             <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
                                 <li class="sidebar-subnav-header">Dasboard</li>
                                 <li class=" ">
-                                    <a href="/home" title="Dasboard">
+                                    <a href="home" title="Dasboard">
                                         <span data-localize="sidebar.nav.pages.LOGIN">Dasboard</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="/newuser" title="Dasboard">
+                                    <a href="newuser" title="Dasboard">
                                         <span data-localize="sidebar.nav.pages.LOGIN">New user</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="/all/user" title="user">
+                                    <a href="all/user" title="user">
                                         <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
                                     </a>
                                 </li>
@@ -323,12 +323,12 @@
                             <ul class="sidebar-nav sidebar-subnav collapse" id="privilage">
                                 <li class="sidebar-subnav-header">Privilage</li>
                                 <li class=" ">
-                                    <a href="/newrole" title="New Role">
+                                    <a href="newrole" title="New Role">
                                         <span data-localize="sidebar.nav.pages.LOGIN">New Role</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="/setting" title="permission">
+                                    <a href="setting" title="permission">
                                         <span>setting</span>
                                     </a>
                                 </li>

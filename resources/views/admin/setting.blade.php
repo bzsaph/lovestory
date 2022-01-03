@@ -30,7 +30,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <form class="form-horizontal" action="/roleupdate/{{$roles->id}}" method="POST">
+                                    <form class="form-horizontal" action="roleupdate/{{$roles->id}}" method="POST">
                                         @csrf
 
                                         <input type="hidden" name="role_id" value="4">

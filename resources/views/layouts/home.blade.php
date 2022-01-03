@@ -69,8 +69,8 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="container">
-      <h3>Impano yanjye</h3>
-      <p> Impano yanjye aims to help every one to write and read story with out any cost of charge but to help growing</p>
+      <h3>Done </h3>
+      <p> Done live to help everyone find out where to contact a car to help them move their belongings and even if you want to build and get freight cars</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>

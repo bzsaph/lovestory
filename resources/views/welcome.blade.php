@@ -10,11 +10,13 @@
         <div class="carousel-inner" role="listbox">
 
           <!-- Slide 1 -->
-          <div class="carousel-item active" style="background: url({{ url('assets/home/img/slide/slide-1.jpg') }};">
+          <div class="carousel-item active" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
+            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Impano </span> Adviced</h2>
-                <p class="animate__animated animate__fadeInUp">Impano it is the palece where every one can request to post his talent for free </p>
+                <h2 class="animate__animated animate__fadeInDown"><span>Call  </span> For droping sand</h2>
+                <p class="animate__animated animate__fadeInUp">Car hire for any kind of trip
+                    Compare deals from the biggest car hire companies </p>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our talent </a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
@@ -24,7 +26,8 @@
           </div>
 
           <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url({{ url('assets/home/img/slide/slide-2.jpg') }};">
+          <div class="carousel-item" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
+            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
@@ -38,8 +41,8 @@
           </div>
 
           <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url({{ url('assets/home/img/slide/slide-3.jpg') }};">
-            <div class="carousel-background"><img src="{{ url('assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
+          <div class="carousel-item" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
+            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Advice</span> story</h2></h2>
@@ -74,9 +77,9 @@
 
   <main id="main">
     <!-- ======= Whu Us Section ======= -->
-    <section id="why-us" class="why-us">
-      <div class="container">
-
+    {{-- <section id="why-us" class="why-us"> --}}
+      {{-- <div class="container"> --}}
+{{--
         <div class="section-title">
           <h2>Why choose <span>Our Site</span></h2>
           <p>-We are here to help every body who have story to share to the other people what happened to him or her
@@ -86,7 +89,7 @@
              - We don't accept the story that distroy any culture all talking bad to some one else
 
           </p>
-        </div>
+        </div> --}}
         {{-- <div class="section-title">
             <h2>Check our tasty <span>Menu</span></h2>
           </div> --}}
@@ -120,15 +123,15 @@
 
         </div> --}}
 
-      </div>
-    </section><!-- End Whu Us Section -->
+      {{-- </div> --}}
+    {{-- </section><!-- End Whu Us Section --> --}}
 
     <!-- ======= Menu Section ======= -->
-    <section id="menu" class="menu">
+    <section >
       <div class="container">
 
         <div class="section-title">
-          <h2>Category of our <span>Story</span>and <span>Advice</span></h2>
+          <h2>List of cars we work with and where they are <span>located </span></h2>
         </div>
 
         <div class="row">
@@ -254,7 +257,7 @@
 
 
     <!-- ======= Chefs Section ======= -->
-    <section id="chefs" class="chefs">
+    {{-- <section id="chefs" class="chefs">
       <div class="container">
 
         <div class="section-title">
@@ -303,7 +306,7 @@
         </div>
 
       </div>
-    </section><!-- End Chefs Section -->
+    </section><!-- End Chefs Section --> --}}
 
     <!-- ======= Testimonials Section ======= -->
     {{-- <section id="testimonials" class="testimonials">
@@ -408,12 +411,12 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
+      {{-- <div class="container">
 
         <div class="section-title">
           <h2><span>Contact</span> Us</h2>
            </div>
-      </div>
+      </div> --}}
 
 
 
@@ -456,58 +459,11 @@
         </div>
         <div class="container">
 
-        <div class="section-title">
-          <h2><span>Contact</span> Us</h2>
-          <p>if you want to be Awriter contuct us and then we give you account.</p>
-          <p>We promise you that we will not share your email from our system except to communicate with you our new updates or replay </p>
-        </div>
+
       </div>
 
 
-        <form action="/suggestion" method="post" role="form" class="php-email-form" id='myForm'>
-            @csrf
-          <div class="form-row">
 
-            <div class="col-md-6 form-group">
-              <input type="email" class="form-control" id="email" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-              <div class="validate"></div>
-            </div>
-            <div class="col-md-6 form-group">
-                <input type="text" class="form-control" id="name" name="name" id="email" placeholder="Your name" data-rule="subject" data-msg="please enter your valide name" />
-                <div class="validate"></div>
-              </div>
-          </div>
-
-          <div class="form-group">
-            <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Here you can either put your message if you want to be auther" placeholder="reply comes to your email /igisubisubizo kiza kuri email yawe"></textarea>
-            <div class="validate"></div>
-          </div>
-
-          <div class="mb-3">
-            <div class="loading">Loading</div>
-            @if (session('status'))
-            <div class="alert alert-success">
-                {{ session('status') }}
-            </div>
-            @endif
-            {{-- <div class="error-message"></div> --}}
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit" id="vv" onclick="submitForm()">Send Message</button></div>
-        </form>
-
-<script>
-    function  submitForm(){
-        $('#vv').find('b').remove();
-
-
-
-
-
-}
-;
-
-</script>
 
       </div>
     </section><!-- End Contact Section -->

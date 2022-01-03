@@ -42,7 +42,7 @@
     <div class="container d-flex align-items-center">
 
       <div class="logo mr-auto">
-        <h1 class="text-light text-upper" ><a href="/"><span>Impano yanjye</span></a></h1>
+        <h1 class="text-light text-upper" ><a href="/"><span>DONE</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="/"><img src="public/assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -79,7 +79,7 @@
         <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
       </div>
       <div class="copyright">
-        &copy; Copyright <strong><span>storytell</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>done</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
 

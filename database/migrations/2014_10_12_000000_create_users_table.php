@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->string('google_id')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->enum('status',['active', 'inactive']);
+            $table->string("grade")->default('0');
             $table->rememberToken();
             $table->timestamps();
         });

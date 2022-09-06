@@ -1,5 +1,6 @@
 @extends('layouts.adminapp')
 @section('content')
+
  <!-- Main section-->
  <section class="section-container">
 <div class="container">

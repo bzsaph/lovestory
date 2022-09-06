@@ -2,120 +2,226 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Connect plus</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-  <title>Interesing impano</title>
-  <meta content="bazimyas@gmail.com" name="descriptison">
-  <meta content="" name="keywords">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    {{-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 
-  <!-- Favicons -->
-  <link href="{{ url('public/assets/product/logo.png') }}" rel="icon">
-  <link href="{{ url('public/assets/product/logo.png') }}" rel="apple-touch-icon">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Vendor CSS Files -->
-  <link href="{{ url('public/assets/home/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ url('public/assets/home/vendor/icofont/icofont.min.css') }}" rel="stylesheet">
-  <link href="{{ url('public/assets/home/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
-  <link href="{{ url('public/assets/home/vendor/animate.css/animate.min.css') }}" rel="stylesheet">
-  <link href="{{ url('public/assets/home/vendor/venobox/venobox.css') }}" rel="stylesheet">
-  <link href="{{ url('public/assets/home/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <script src="{{ url('assets/welcome/js/script.js') }}"></script>
 
-  <!-- Template Main CSS File -->
-  <link href="{{ url('public/assets/home/css/style.css') }}" rel="stylesheet">
-  <!-- Start of Async Callbell Code -->
-<script>
-    window.callbellSettings = {
-      token: "GVNLCqQgEfJ3qMjA2Ln31i9j"
-    };
-  </script>
-  <script>
-    (function(){var w=window;var ic=w.callbell;if(typeof ic==="function"){ic('reattach_activator');ic('update',callbellSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Callbell=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://dash.callbell.eu/include/'+window.callbellSettings.token+'.js';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()
-  </script>
-  <!-- End of Async Callbell Code -->
-{{-- / --}}
+    <link rel="stylesheet" href="{{ url('assets/welcome/css/styles.css') }}">
+
 </head>
 
+<style>
+    .button1 {
+        background-color: black;
+        opacity: 0.8;
+        border: 2px solid #4CAF50;
+    }
+
+    .button1:hover {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+
+    .dropdown>.dropdown-toggle:active {
+        /*Without this, clicking will make it sticky*/
+        pointer-events: none;
+    }
+body{
+    background:#000 !important
+}
+</style>
+
 <body>
-    <!-- ======= Top Bar ======= -->
- <section id="topbar" class="d-none d-lg-flex align-items-center fixed-top topbar-transparent" style="background: #35322d !important">
-    <div class="container text-right">
-      <i class="icofont-phone"></i> whatsapp: +250788377874
-      <i class="icofont-clock-time icofont-rotate-180"></i> Mon-Sat: 11:00 AM - 23:00 PM
-    </div>
-  </section>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent"  style="background: #35322d !important">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo mr-auto">
-        <h1 class="text-light text-upper" ><a href="/"><span>DONE</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="/"><img src="public/assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/#about">About</a></li>
-          <li><a href="/#chefs">Team</a></li>
-          <li><a href="still">Product <sup><span class="badge badge-light btn btn-success">here</span></sup></a></li>
-          <li><a href="/#contact">Contact</a></li>
-        <li><a href="login">Login </a></li>
+    <!-- Navbar -->
+    <nav class="navbar  navbar-expand-lg  scrolling-navbar"   >
+        <div class="container" style="margin-left:10%; margin-right:10%">
+            <a class="navbar-brand" href="/" style="font-size:30px;color:#fff">
+               IIS
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="/">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
 
 
-        </ul>
-      </nav><!-- .nav-menu -->
 
-    </div>
-  </header><!-- End Header -->
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#"></a>
+                    </li>
 
-<div>
-    @yield('content')
-</div>
-<!-- ======= Footer ======= -->
-<footer id="footer">
-    <div class="container">
-      <h3>Done </h3>
-      <p> Done live to help everyone find out where to contact a car to help them move their belongings and even if you want to build and get freight cars</p>
-      <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
-      <div class="copyright">
-        &copy; Copyright <strong><span>done</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
 
-        Designed by <a href="yanjye.com">yanjye </a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+                    <li>
+                        <div class="dropdown">
+                            <a class="nav-link text-light dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Join Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item nav-link" href="/login">login</a>
+                                <a class="dropdown-item nav-link" href="/register">Register</a>
+                            </div>
+                        </div>
+                    </li>
 
-  <!-- Vendor JS Files -->
-  <script src="{{ url('public/assets/home/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/jquery.easing/jquery.easing.min.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/php-email-form/validate.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/jquery-sticky/jquery.sticky.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/venobox/venobox.min.js') }}"></script>
-  <script src="{{ url('public/assets/home/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
 
-  <!-- Template Main JS File -->
-  <script src="{{ url('public/assets/home//js/main.js') }}"></script>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar -->
+
+    <script>
+        AOS.init();
+
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll > 300) {
+                    $(".navbar").css("background", "#292828");
+                } else {
+                    $(".navbar").css("background", "none");
+                }
+            })
+        })
+
+    </script>
+
+    <!--Carousel Wrapper-->
+
+
+
+        <main>
+            @yield('content')
+        </main>
+
+        <footer class="page-footer font-small pt-4 text-light" style="background-color:#386570">
+
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase">Footer Content</h5>
+                        <p>This project will help every students and Leactures</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">Partaners</h5>
+
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://site.unilak.ac.rw/" class="text-light">UNILAK</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-light">Bazimya saphani</a>
+                            </li>
+                            {{-- <li>
+                                <a href="#!" class="text-light">Link 3</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Link 4</a>
+                            </li> --}}
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+
+                        <!-- Links -->
+                        <h5 class="text-uppercase">ADDRESS</h5>
+
+                        <ul class="list-unstyled">
+                            {{-- <li>
+                                <a href="" class="text-light">Kacyiru</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Oppostite zigama</a>
+                            </li> --}}
+                            <li>
+                                <a href="#!" class="text-light">Whatsapp:0788377874</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-light">Email:yanjye.com@gmail.com</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Links -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3" style="background-color:black; opacity: 0.3">© 2020 Copyright:
+                connect plus
+
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+
 
 </body>
 
 </html>
-
-

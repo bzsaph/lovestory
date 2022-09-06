@@ -1,13 +1,12 @@
-
-
-
-this will help to create important seed     
- # php artisan db:seed --class=UsersTableSeeder
+$ php artisan db:seed --class=Roleseeder
 Database seeding completed successfully.
 
-this will help to create important seed 
-# php artisan db:seed --class=RolesTablesSeeder     
-Database seeding completed succes
-# php artisan db:seed --class=PermissionTableSeeder
-this will help to create important seed      
-# artisan db:seed --class=RolePermissionTableSeeder
+
+$ php artisan db:seed --class=Permissionseeder
+Database seeding completed successfully.
+
+
+$ php artisan db:seed --class=UserSeeder
+Database seeding completed successfully.
+
+$ php artisan db:seed --class=Giveparmission

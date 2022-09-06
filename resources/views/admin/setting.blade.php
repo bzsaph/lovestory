@@ -1,4 +1,12 @@
 @extends('layouts.adminapp')
+ @if ($message = Session::get('message'))
+                            <div class="alert alert-success">
+                            <ul>
+                                    {{ $message }}
+                            </ul>
+                            </div>
+                            @endif
+        <div class="container-fluid">
 @section('content')
 <!-- Main section-->
 <section class="section-container">

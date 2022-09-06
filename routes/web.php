@@ -1,5 +1,6 @@
 <?php
-
+use App\Commentonproject;
+use App\Newproject;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,19 +16,23 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','Userscontroller@welcome');
 
-Auth::routes(['register' => false]);
+
+
+
+Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/Createstory','HomeController@Createstory');
-Route::post('/submitstoror','HomeController@submitstoror');
+Route::get('/newprojectinsert','HomeController@newprojectinsert');
+Route::post('/storeproject','HomeController@storeproject');
 Route::get('/Read/{id}','Userscontroller@Readstory');
 Route::post('/Comenttostory','Userscontroller@Comenttostory');
 Route::get('Previous/{id}', 'Userscontroller@Previous');
 Route::get('Next/{id}', 'Userscontroller@Next');
-Route::get('/createcategory', 'Userscontroller@createcategory');
-Route::post('/postcategory', 'Userscontroller@postcategory');
-Route::post('/suggestion', 'Userscontroller@suggestion');
-Route::get('/still', 'Userscontroller@still');
+Route::get('/viewprojectsented', 'HomeController@viewprojectsented');
+Route::post('/comentontheproject', 'HomeController@comentontheproject');
+Route::get('/commentonproject/{id}','HomeController@commentonproject');
+
+
 Route::get('/Message', 'Userscontroller@Messages');
 Route::get('/newrole', 'HomeController@newrole');
 Route::get('/setting', 'HomeController@setting');
@@ -42,12 +47,18 @@ Route::any('/admin/updateuser', 'HomeController@updateuser');
 Route::post('/roleupdate/{id}', 'HomeController@roleupdate');
 Route::get('/newproduct', 'HomeController@newproduct');
 Route::post('/postnewproduct', 'HomeController@postnewproduct');
+Route::get('/newcompany', 'HomeController@newcompany');
+
+Route::post('/insertnewcompany', 'HomeController@insertnewcompany');
+Route::any('/indexcreatecompany', 'HomeController@indexcreatecompany');
+Route::any('/storeinternaship', 'HomeController@storeinternaship');
+
+Route::any('/addreportoftheweek/{id}', 'HomeController@addreportoftheweek');
+Route::any('/postweekreport', 'HomeController@postweekreport');
 
 
 
 
 
-
-
-
+Auth::routes(['register' => true]);
 

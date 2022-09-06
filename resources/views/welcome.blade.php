@@ -1,477 +1,470 @@
 @extends('layouts.home')
+
 @section('content')
-<!-- ======= Hero Section ======= -->
-<section id="hero">
-    <div class="hero-container">
-      <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+<div>
+   <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
 
-        <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+	   <!--Indicators-->
+	   <ol class="carousel-indicators">
+		   <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+		   <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+		   <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+	   </ol>
+	   <!--/.Indicators-->
 
-        <div class="carousel-inner" role="listbox">
+	   <!--Slides-->
+	   <div class="carousel-inner" role="listbox">
 
-          <!-- Slide 1 -->
-          <div class="carousel-item active" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
-            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Call  </span> For droping sand</h2>
-                <p class="animate__animated animate__fadeInUp">Car hire for any kind of trip
-                    Compare deals from the biggest car hire companies </p>
-                <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Our talent </a>
-                  <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
+		   <!--First slide-->
+		   <div class="carousel-item active">
+			   <div class="view" style="background-image: url('../assets/img/firstSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+				   <!-- Mask & flexbox options-->
+				   <div class="mask rgba-black-light d-flex">
+
+					   <!-- Content -->
+					   <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="3000" style="margin-top: 15%; margin-left:2%">
+						   <div class="row">
+							   <div class="col-md-8">
+								   <h1 class="mb-4">
+									   <strong class="text-light">Students And Rectures Connector</strong>
+								   </h1>
+
+								   <p>
+									   <strong>Helping Students, Rectures to mark and review there project and give them feedback</strong>
+								   </p>
+
+								   <p class="mb-4 d-none d-md-block">
+									   <strong></strong>
+								   </p>
+
+								   <button class="button button1">
+									   <a target="_blank" href="/login" class="btn btn-outline-white btn-lg text-light">Get Started
+										   <i class="fa fa-fast-forward ml-2"></i>
+									   </a>
+								   </button>
+
+							   </div>
+						   </div>
+
+
+					   </div>
+					   <!-- Content -->
+
+				   </div>
+				   <!-- Mask & flexbox options-->
+
+			   </div>
+		   </div>
+		   <!--/First slide-->
+
+		   <!--Second slide-->
+		   <div class="carousel-item">
+			   <div class="view" style="background-image: url('../assets/img/secondSlide.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+				   <!-- Mask & flexbox options-->
+				   <div class="mask rgba-black-light d-flex justify-content-end">
+
+					   <!-- Content -->
+					   <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000" style="margin-top:15%; margin-right:20%">
+						   {{-- <div class="row">
+								<div class="col-md-7"> --}}
+						   <h1 class="mb-4">
+							   <strong class="text-light">Students And <br> Leactures Connector</strong>
+						   </h1>
+
+						   <p>
+							   <strong>Helping Students, Leactures and lenders make <br> better decisions
+								   about
+								   On the project implimented and marking</strong>
+						   </p>
+
+						   <p class="mb-4 d-none d-md-block">
+							   <strong></strong>
+						   </p>
+
+						   <button class="button button1">
+							   <a target="_blank" href="/login" class="btn btn-outline-white btn-lg text-light">Get Started
+								   <i class="fa fa-fast-forward ml-2"></i>
+							   </a>
+						   </button>
+
+						   {{--
+								</div>
+							</div> --}}
+
+
+					   </div>
+					   <!-- Content -->
+
+				   </div>
+				   <!-- Mask & flexbox options-->
+
+			   </div>
+		   </div>
+		   <!--/Second slide-->
+
+		   <!--Third slide-->
+		   <div class="carousel-item">
+			   <div class="view" style="background-image: url('../assets/img/thirdSlide.JPG'); background-repeat: no-repeat; background-size: cover;">
+
+				   <!-- Mask & flexbox options-->
+				   <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+					   <!-- Content -->
+					   <div class="text-center text-light mx-5 wow" data-aos="fade-up-right" data-aos-duration="6000" style="margin-top:15%; ">
+						   {{-- <div class="row">
+								<div class="col-md-7"> --}}
+						   <h1 class="mb-4">
+							   <strong class="text-light">Lectures And <br> Students Connector</strong>
+						   </h1>
+
+						   <p>
+							   <strong>Helping Students, Lectures and lenders make <br> better decisions
+								   about
+								   Project and marking them</strong>
+						   </p>
+
+						   <p class="mb-4 d-none d-md-block">
+							   <strong></strong>
+						   </p>
+
+						   <button class="button button1">
+							   <a target="_blank" href="/login" class="btn btn-outline-white btn-lg text-light">Get Started
+								   <i class="fa fa-fast-forward ml-2"></i>
+							   </a>
+						   </button>
+
+						   {{--
+								</div>
+							</div> --}}
+						   <!-- Content -->
+
+					   </div>
+					   <!-- Mask & flexbox options-->
+
+				   </div>
+			   </div>
+			   <!--/Third slide-->
+
+		   </div>
+		   <!--/.Slides-->
+
+		   <!--Controls-->
+		   <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+			   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			   <span class="sr-only">Previous</span>
+		   </a>
+		   <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+			   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+			   <span class="sr-only">Next</span>
+		   </a>
+		   <!--/.Controls-->
+
+	   </div>
+	   <!--/.Carousel Wrapper-->
+
+   </div>
+</div>
+
+
+</div>
+
+  {{-- About --}}
+    <section style="color:#fff !important">
+        <div class="container" style="margin-top: 11%" >
+            <div class="row">
+                <div class="col-sm-5">
+                    <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">Our Story
+                    </h2>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 2 -->
-          <div class="carousel-item" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
-            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>equipment</span> sell</h2></h2>
-                <p class="animate__animated animate__fadeInUp">If you have used the equipment or want to sell it, we will help you when you have the documents.
-
+                <div class="col-sm-6  text-justify" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="2000">
+                    <p>I am a student of Unilak School of Communication in Networking and have some of the skills in web application technology, desktop application, mobile application, hardware development, ussd and channel configuration, devops
                     </p>
-                <div>
-                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Ourstory </a>
-                    <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
+                    <p> I always find it difficult and easy to find a job that I am looking for.
+                    </p>
+
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <!-- Slide 3 -->
-          <div class="carousel-item" style="background: url({{ url('public/assets/home/img/slide/slide-3.jpg') }};">
-            <div class="carousel-background"><img src="{{ url('public/assets/home/img/slide/slide-3.jpg') }}" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>guide</span> </h2>technology</h2>
-                <p class="animate__animated animate__fadeInUp">We guide you through the process of expanding your technology</p>
-                <div>
-                    <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">talent </a>
-                    <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Contact us</a>
-                </div>
-              </div>
             </div>
-          </div>
-
         </div>
+    </section>
+    {{-- Services --}}
 
-        <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon icofont-simple-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
+    <section style="background-color: #e1f1f5; margin-top: 10%;">
+        <div class="container" style="margin-top: 7%; margin-left:5%;">
+            <h1 class="text-center" data-aos="fade-up" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"
+                style="margin-bottom: 5%; padding-top:7%; width:100%">Services</h1>
+            <div class="row">
 
-        <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
-          <span class="carousel-control-next-icon icofont-simple-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 
-      </div>
-    </div>
-  </section><!-- End Hero -->
-
-
-
-
-
-  <main id="main">
-    <!-- ======= Whu Us Section ======= -->
-    {{-- <section id="why-us" class="why-us"> --}}
-      {{-- <div class="container"> --}}
-{{--
-        <div class="section-title">
-          <h2>Why choose <span>Our Site</span></h2>
-          <p>-We are here to help every body who have story to share to the other people what happened to him or her
-              and other people there can react to the story <br>
-              -Second we want to share the past story of some example people that we know from the past<br>
-              -Third we want to make world of advice and intresresting story<br>
-             - We don't accept the story that distroy any culture all talking bad to some one else
-
-          </p>
-        </div> --}}
-        {{-- <div class="section-title">
-            <h2>Check our tasty <span>Menu</span></h2>
-          </div> --}}
-
-        {{-- <div class="row">
-
-
-          <div class="col-lg-4">
-            <div class="box">
-              <span>01</span>
-              <h4>Lorem Ipsum</h4>
-
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box">
-              <span>02</span>
-              <h4>Repellat Nihil</h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box">
-              <span>03</span>
-              <h4> Ad ad velit qui</h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
-            </div>
-          </div>
-
-        </div> --}}
-
-      {{-- </div> --}}
-    {{-- </section><!-- End Whu Us Section --> --}}
-
-    <!-- ======= Menu Section ======= -->
-    <section >
-      <div class="container">
-
-        <div class="section-title">
-          <h2>List of cars we work with and where they are <span>located </span></h2>
-        </div>
-
-        <div class="row">
-
-
-                @foreach ($category as $item)
-                <div class="col-md-3" style="margin-top: 30px !important">
-                    <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ $item->name }}
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        @foreach ($item['newstories'] as $newstory)
-                      <a class="dropdown-item" href="/Read/{{ $newstory->id }}">{{ $newstory->Title }}</a>
-
-                      @endforeach
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets/img/download.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="my-3">Mentorship</h4>
+                            <p class="text-muted" style="width: 85%">
+                                Helping and teaching peers is my dream and I always have a desire to help.</p>
+                            <br><br>
+                        </div>
                     </div>
-                  </div>
+
+
                 </div>
 
-
-
-                @endforeach
-
-        </div>
-
-
-      </div>
-    </section><!-- End Menu Section -->
-
-{{--
-    <!-- ======= Events Section ======= -->
-    <section id="events" class="events">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Organize Your <span>Events</span> in our Restaurant</h2>
-        </div>
-
-        <div class="owl-carousel events-carousel">
-
-          <div class="row event-item">
-            <div class="col-lg-6">
-              <img src="assets/img/event-birthday.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Birthday Parties</h3>
-              <div class="price">
-                <p><span>$189</span></p>
-              </div>
-              <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur
-              </p>
-            </div>
-          </div>
-
-          <div class="row event-item">
-            <div class="col-lg-6">
-              <img src="assets/img/event-private.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Private Parties</h3>
-              <div class="price">
-                <p><span>$290</span></p>
-              </div>
-              <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur
-              </p>
-            </div>
-          </div>
-
-          <div class="row event-item">
-            <div class="col-lg-6">
-              <img src="assets/img/event-custom.jpg" class="img-fluid" alt="">
-            </div>
-            <div class="col-lg-6 pt-4 pt-lg-0 content">
-              <h3>Custom Parties</h3>
-              <div class="price">
-                <p><span>$99</span></p>
-              </div>
-              <p class="font-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
-              </p>
-              <ul>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              </ul>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Events Section --> --}}
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets\img\funding.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="my-3">Funding</h4>
+                            <p class="text-muted" style="width: 85%">
+                                help someone figure out what to do outside .</p>
+                        </div>
+                    </div>
 
 
 
+                    <br><br>
 
-    <!-- ======= Chefs Section ======= -->
-    {{-- <section id="chefs" class="chefs">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Our  <span>Team</span></h2>
-
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/home/img/chefs/bazimya.jpeg" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Bazimya </h4>
-                <span>Co-founder</span>
-                <span>CTO </span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
                 </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="assets/home/img/chefs/didier.PNG" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Ndabarasa Didier</h4>
-                <span>Co founder </span>
-                <span>Auther</span>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
+                <div class="col-md-4" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="assets\img\advice.svg" alt=""
+                                style="width:70px; font-size:70px; color:rgb(104, 194, 216);text-shadow: 3px 5px 2px rgb(68, 94, 100), 3px 5px rgb(68, 94, 100);">
+
+                        </div>
+                        <div class="col-md-9">
+                            <h4 class="my-3">Advice</h4>
+                            <p class="text-muted" style="width: 85%">
+                                Advice for everyone to learn well and to have a goal is not just a score but a lot of activities when you know a lot you don't have time to explain it and when you don't know a lot you get a chance to explain it.
+
+
+                            </p>
+                        </div>
+                    </div>
+                    <br><br>
+
+
+
+
+
                 </div>
-              </div>
             </div>
-          </div>
-
-
-
         </div>
 
-      </div>
-    </section><!-- End Chefs Section --> --}}
+    </section>
 
-    <!-- ======= Testimonials Section ======= -->
-    {{-- <section id="testimonials" class="testimonials">
-      <div class="container">
+    {{-- testmonials --}}
 
-        <div class="owl-carousel testimonials-carousel">
+    <section>
+        {{-- <div class="container" style="margin-top: 7%;">
+            <h1 class="text-center" data-aos="fade-in" data-aos-duration="1500" data-aos-anchor-placement="top-bottom"
+                style="margin-bottom: 5%; width:90%">Successful stories</h1>
+            {{-- <div class="row"> --}}
+                {{-- <div class="col-md-4">
 
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Saul Goodman</h3>
-            <h4>Ceo &amp; Founder</h4>
-            <div class="stars">
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div> --}}
+            {{-- <section class="slider">
+                <div class="slide">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slide">
+                    <div class="card profile-card-5">
+                        <div class="card-img-block">
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1517832207067-4db24a2ae47c"
+                                alt="Card image cap">
+                        </div>
+                        <div class="card-body pt-0">
+                            <p class="card-text"><i class="fa fa-quote-left" aria-hidden="true"></i>
+                                Some quick example text to build on the card title and make up
+                                the bulk
+                                of the card's content. <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            </p>
+                            <h5 class="card-title" style="float:right">MyName Surname</h5>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+
+
+        </div> --}}
+    </section>
+
+    {{-- contact form --}}
+
+    {{-- <section style="margin-top: 7%; background-color: #e1f1f5">
+        <div style="padding-top:1%">
+            <div class="container contact-form">
+                <div class="contact-image">
+                    <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
+                </div>
+                <form method="post">
+                    <h3>Contact Us</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *"
+                                    value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *"
+                                    value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="txtMsg" class="form-control" placeholder="Your Message *"
+                                    style="width: 100%; height: 150px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-            <h3>Sara Wilsson</h3>
-            <h4>Designer</h4>
-            <div class="stars">
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-            </div>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Jena Karlis</h3>
-            <h4>Store Owner</h4>
-            <div class="stars">
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-            </div>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Matt Brandon</h3>
-            <h4>Freelancer</h4>
-            <div class="stars">
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-            </div>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
-          <div class="testimonial-item">
-            <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>John Larson</h3>
-            <h4>Entrepreneur</h4>
-            <div class="stars">
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-              <i class="icofont-star"></i>
-            </div>
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-          </div>
-
         </div>
 
-      </div>
-    </section><!-- End Testimonials Section --> --}}
+        <br><br>
+    </section> --}}
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      {{-- <div class="container">
+    {{-- footer --}}
+    <!-- Footer -->
 
-        <div class="section-title">
-          <h2><span>Contact</span> Us</h2>
-           </div>
-      </div> --}}
+    <!-- Footer -->
+    <script>
+        $('#recipeCarousel').carousel({
+            interval: 10000
+        })
 
+        $('.carousel .carousel-item').each(function() {
+            var minPerSlide = 3;
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
 
+            for (var i = 0; i < minPerSlide; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
 
-      <div class="container mt-5">
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
 
-        <div class="info-wrap">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 info">
-              <i class="icofont-google-map"></i>
-              <h4>Head office :</h4>
-              <p>Rwanda<br>Kigali, Kacyiru</p>
-              <h4>Branch</h4>
-              <p>Kenya<br>Nairobi, Ngongo load</p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-              <i class="icofont-clock-time icofont-rotate-90"></i>
-              <h4>Open Hours Rwanda:</h4>
-              <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
-            <h4>Open Hours Kenya</h4>
-              <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-              <i class="icofont-envelope"></i>
-              <h4>Email Rwanda :</h4>
-              <p>inamazose@gmail.com/ info@yanjye.com</p>
-              <h4>Email Kenya :</h4>
-              <p>ndabadidi1@gmail.com</p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
-              <i class="icofont-phone"></i>
-              <h4>Whatsapp Rwanda:</h4>
-              <p>+250788377874</p>
-              <h4>Whatsapp Kenya:</h4>
-              <p>+254794589915<br>+254782563631</p>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-
-
-      </div>
-
-
-
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
+    </script>
 @endsection
   <!-- ======= Header ======= -->
 

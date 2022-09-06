@@ -29,6 +29,29 @@
         @enderror
     </div>
 </div>
+
+<div class="form-group row">
+    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Grade ') }}</label>
+
+    <div class="col-md-6">
+    <select class="form-control @error('grade') is-invalid @enderror" value="{{ old('grade') }}@isset($user) {{$user->grade}}@endisset" name="grade" required autocomplete="grade" >
+        <option value="0" disabled selected>choose</option>
+        @if($user->grade =="0")
+            <option value="0" class="bg-success" selected>Students </option>
+             <option value="1"  >Supervisor </option>
+        @else
+        <option value="1" class="bg-success"  selected>Supervisor </option>
+        <option value="0" >Students </option>
+        @endif
+    </select>
+
+        @error('grade')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+        @enderror
+    </div>
+</div>
 @isset($create)
 <div class="form-group row">
     <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

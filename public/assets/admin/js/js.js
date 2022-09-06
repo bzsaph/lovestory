@@ -1,5 +1,5 @@
 $('#summernote').summernote({
-    placeholder: 'HELLO FROM LOVE STORY',
+    placeholder: 'Please write your  message and instart your link here  there is sign of link up click and past',
     tabsize: 2,
     height: 120,
     toolbar: [

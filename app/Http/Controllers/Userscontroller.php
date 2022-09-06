@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Newproject;
 use App\Comment;
 use App\User;
 use App\Newstory;
@@ -19,18 +19,9 @@ use Spatie\Permission\Models\Role;
 class Userscontroller extends Controller
 {
     public function welcome(){
-        $story=DB::table('newstories')->where('Delete','0')->get();
-        $alluser = User::all();
-        $category =Category::all();
-        foreach ($category as $key => $value) {
-            $sector = $value->id;
-            $data=DB::table('newstories')->where('Category', $sector)->get();
 
-            $category[$key]['newstories'] =$data;
-            # code...
-        }
-        // dd($category);
-        return view('welcome',compact('story','alluser','category'));
+
+        return view('welcome');
 
     }
     public function Readstory($id){
@@ -67,11 +58,7 @@ class Userscontroller extends Controller
             return Redirect::to('Read/'.$next->id);
         }
     }
-    public function createcategory()
-        {
-            $category =Category::all();
-        return view('admin.category',compact('category'));
-        }
+
     public function postcategory(Request $request){
             $category =new Category();
             $category->name=$request->name;

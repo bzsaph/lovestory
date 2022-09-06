@@ -1,50 +1,91 @@
 @extends('layouts.adminapp')
 @section('content')
- <!-- Main section-->
- <section class="section-container">
+
+
+<section class="section-container">
     <!-- Page content-->
     <div class="content-wrapper">
-        <div class="content-heading">
-            <div>Create category
-                <small>Insert category</small>
-            </div>
-        </div>
+       <div class="content-heading">
+          <div>Project submited
+             <small>view </small>
+          </div>
+       </div>
+       <div class="container-fluid">
+          <!-- DATATABLE DEMO 1-->
 
-        <!-- START row-->
-        <div class="row">
-            <div class="col-lg-12" >
-                <form class="form-horizontal" action="/postcategory" method="POST">
-                    @csrf
+          <!-- DATATABLE DEMO 2-->
+          <div class="card"  >
+             <div class="card-header">
+                <div class="card-title">Please review your project</div>
 
-                    <!-- START card-->
-                    <div class="card card-default">
-                        <div class="bg-gray-lighter px-3 py-2 mb-3">Category</div>
-                        <div class="card-body">
 
-                            <fieldset>
 
-                                <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Name:</label>
-                                    <div class="col-md-6" style="margin-top: 10px">
-                                        <input class="form-control" type="text" placeholder="karisa seriyambere one" name="name">
-                                    </div>
+             </div>
+             <div class="card-body" >
+
+                <table class="table table-striped my-4 w-100" id="datatable2" >
+                    <caption style="caption-side: top; text-align: center">{{Auth::user()->name}}</caption>
+                   <thead>
+
+                      <tr>
+                        <th>Created by</th>
+                        <th>Assigned To</th>
+                        <th>Project name</th>
+
+                        <th>Action</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+
+                    @foreach ($Newproject as $Key=>$item)
+
+                    <tr>
+                        <td class="bg-warning text-white" > <a class="text-white"  href="commentonproject/{{$item->id}}"> {{$item->createdby->name}}</a></td>
+                        <td>{{$item->assignedto->name}}</td>
+                        <td>{!! $item->projectname !!}</td>
+                        <td>
+
+                        <!-- Button trigger modal -->
+                            <button type="button" class="btn bg-success " data-toggle="modal" data-target="#ex{{$item->id}}">
+                          edit
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="ex{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">Ploject LInk</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
+                                <div class="modal-body">
+                                   <p>{!! $item->link !!}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                                </div>
+                            </div>
+                            </div>
 
 
-                            </fieldset>
 
+                        </td>
+                         </tr>
 
-                        </div>
-                        <div class="card-footer text-center">
-                            <button class="btn btn-info" type="submit">Submite category</button>
-                        </div>
-                    </div>
-                    <!-- END card-->
-                </form>
-            </div>
-        </div>
-        <!-- END row-->
+            @endforeach
+                   </tbody>
+                </table>
+             </div>
+          </div>
+          <!-- DATATABLE DEMO 3-->
+
+       </div>
     </div>
-</section>
-
+ </section>
+<!-- Page footer-->
 @endsection
+

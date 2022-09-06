@@ -5,22 +5,22 @@
     <!-- Page content-->
     <div class="content-wrapper">
         <div class="content-heading">
-            <div>New story
-                <small>insert story</small>
+            <div>Insert your project here
+                <small>New project</small>
             </div>
         </div>
 
         <!-- START row-->
         <div class="row">
-            @can('user-create')
+            {{-- @can('user-create') --}}
             <div class="col-lg-12" >
-                <form class="form-horizontal" action="/submitstoror" method="POST">
+                <form class="form-horizontal" action="/storeproject" method="POST">
 
                     @csrf
 
                     <!-- START card-->
                     <div class="card card-default">
-                        <div class="bg-gray-lighter px-3 py-2 mb-3">Story</div>
+                        <div class="bg-gray-lighter px-3 py-2 mb-3">Instert your project to be reviewed</div>
                         <div class="card-body">
 
                             <fieldset>
@@ -31,17 +31,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Title of the story</label>
+                                    <label class="col-md-2 col-form-label">Project name</label>
                                     <div class="col-md-6" style="margin-top: 10px">
-                                        <input class="form-control" type="text" name="titleofthestory">
+                                        <input class="form-control" type="text" name="projectname" required>
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label class="col-md-2 col-form-label">Name of Auth</label>
+                                    <label class="col-md-2 col-form-label">supervisor </label>
                                     <div class="col-md-6" style="margin-top:10px">
-                                        <select id="" class="form-control" name="category">
-                                            <option  selected disabled >choose category</option>
+                                        <select id="" class="form-control" name="assignedto">
+                                            <option  selected disabled >choose supervisor name</option>
                                             @foreach ($category as $item)
                                             <option value="{{ $item->id }}">{{ $item->name }}</option>
                                             @endforeach
@@ -55,25 +55,22 @@
 
 
                                 <div class="form-group row" >
-                                    <label class="col-md-2 col-form-label">Your story</label>
+                                    <label class="col-md-2 col-form-label">Your project link and more about</label>
                                     <div class="col-md-10" style="margin-top:10px">
-                                    <textarea id="summernote" class="form-control" maxlength="600" name="newstory"></textarea>
+                                    <textarea id="summernote" class="form-control" maxlength="600" name="link"></textarea>
                                 </div>
                                 </div>
 
                         </div>
                         <div class="card-footer text-center">
-                            <button class="btn btn-info" type="submit">Submite story</button>
+                            <button class="btn btn-info" type="submit">Send to Supervisor</button>
                         </div>
                     </div>
                     <!-- END card-->
                 </form>
             </div>
         </div>
-        @else
-        <p>You dont have parmission</p>
-        @endcan
-        <!-- END row-->
+
     </div>
 </section>
 

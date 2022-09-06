@@ -1,5 +1,7 @@
 @extends('layouts.adminapp')
 @section('content')
+
+        <div class="container-fluid">
  <!-- Main section-->
  <section class="section-container">
 <div class="container">

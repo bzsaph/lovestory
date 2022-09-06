@@ -8,43 +8,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Bazimya saphani">
     <meta name="keywords" content="app, responsive, jquery, bootstrap, dashboard, admin">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ url('public/assets/product/logo.png') }}">
-    <title>Impano dashboard</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('assets/product/logo.png') }}">
+    <title>IIS </title>
 
     @yield('title')
 
     <!-- =============== VENDOR STYLES ===============-->
     <!-- FONT AWESOME-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css')}}">
     <!-- SIMPLE LINE ICONS-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/simple-line-icons/css/simple-line-icons.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/simple-line-icons/css/simple-line-icons.css')}}">
     <!-- ANIMATE.CSS-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/animate.css/animate.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/animate.css/animate.css')}}">
     <!-- WHIRL (spinners)-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/whirl/dist/whirl.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/whirl/dist/whirl.css')}}">
     <!-- =============== PAGE VENDOR STYLES ===============-->
     <!-- WEATHER ICONS-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/weather-icons/css/weather-icons.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/weather-icons/css/weather-icons.css')}}">
     <!-- =============== BOOTSTRAP STYLES ===============-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/css/bootstrap.css')}}" id="bscss">
+    <link rel="stylesheet" href="{{ url('assets/admin/css/bootstrap.css')}}" id="bscss">
 
     <!-- Datatables-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/datatables.net-keytable-bs/css/keyTable.bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-bs4/css/dataTables.bootstrap4.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-keytable-bs/css/keyTable.bootstrap.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.css')}}">
     <!-- =============== BOOTSTRAP STYLES ===============-->
     <!-- Dropzone-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/dropzone/dist/basic.css')}}">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/vendor/dropzone/dist/dropzone.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/basic.css')}}">
+    <link rel="stylesheet" href="{{ url('assets/admin/vendor/dropzone/dist/dropzone.css')}}">
 
     <!-- =============== APP STYLES ===============-->
-    <link rel="stylesheet" href="{{ url('public/assets/admin/css/app.css')}}" id="maincss">
-    <link rel="stylesheet" href="{{ url('public/assets/admin/css/alertbuton.css')}}" id="maincss">
+    <link rel="stylesheet" href="{{ url('assets/admin/css/app.css')}}" id="maincss">
+    <link rel="stylesheet" href="{{ url('assets/admin/css/alertbuton.css')}}" id="maincss">
 
-    {{-- <link rel="stylesheet" href="{{ url('public/assets/admin/css/summernote.css')}}" id="maincss"> --}}
+    {{-- <link rel="stylesheet" href="{{ url('assets/admin/css/summernote.css')}}" id="maincss"> --}}
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style type="text/css">
@@ -80,10 +80,10 @@
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#/">
                         <div class="brand-logo">
-                            <img class="img-fluid" src="{{ url('public/assets/product/logobg.png') }}" alt="App Logo">
+                            <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
                         </div>
                         <div class="brand-logo-collapsed">
-                            <img class="img-fluid" src="{{ url('public/assets/product/logobg.png') }}" alt="App Logo">
+                            <img class="img-fluid" src="{{ url('assets/product/logobg.png') }}" alt="App Logo">
                         </div>
                     </a>
                 </div>
@@ -118,6 +118,11 @@
                             @csrf
                         </form>
                     </li>
+
+
+
+
+
                     <!-- END lock screen-->
                 </ul>
                 <!-- END Left navbar-->
@@ -137,12 +142,12 @@
                     </li>
                     <!-- START Alert menu-->
                     <li class="nav-item dropdown dropdown-list">
-                        <a class="nav-link dropdown-toggle dropdown-toggle-nocaret" href="#" data-toggle="dropdown">
+                        <a class="nav-link  dropdown-toggle-nocaret" href="/viewprojectsented">
                             <em class="icon-bell"></em>
-                            <span class="badge badge-danger">11</span>
+                            <span class="badge badge-danger">{!!$selectunreaded!!}</span>
                         </a>
                         <!-- START Dropdown menu-->
-                        <div class="dropdown-menu dropdown-menu-right animated flipInX">
+                        {{-- <div class="dropdown-menu dropdown-menu-right animated flipInX">
                             <div class="dropdown-item">
                                 <!-- START list group-->
                                 <div class="list-group">
@@ -192,7 +197,7 @@
                                 </div>
                                 <!-- END list group-->
                             </div>
-                        </div>
+                        </div> --}}
                         <!-- END Dropdown menu-->
                     </li>
                     <!-- END Alert menu-->
@@ -218,14 +223,14 @@
             <!-- END Top Navbar-->
         </header>
         <!-- sidebar-->
-        <aside class="aside-container" style="background:rgba(27, 24, 24, 0.849) !important">
+        <aside class="aside-container" style="background:#3dc0e8 !important">
             <!-- START Sidebar (left)-->
             <div class="aside-inner">
-                <nav class="sidebar" data-sidebar-anyclick-close="" style="background:rgba(27, 24, 24, 0.849) !important">
+                <nav class="sidebar" data-sidebar-anyclick-close="" style="background:#3dc0e8 !important;color:#fff !important">
                     <!-- START sidebar nav-->
                     <ul class="sidebar-nav">
                         <!-- START user info-->
-                        <li class="has-user-block">
+                        <li class="has-user-block" style="color:#fff !important">
                             <div class="collapse" id="user-block">
                                 <div class="item user-block">
                                     <!-- User picture-->
@@ -254,202 +259,237 @@
                             </a>
                         </li>
                         {{-- doropdown  in to create lore and pamissinon --}}
-                        @role('administrator|superadmin')
+
                         <li class="">
                             <a href="#dashboard" title="Dasboard" data-toggle="collapse">
-                                <em class="icon-doc"></em>
-                                <span data-localize="sidebar.nav.pages.PAGES">Dasboard</span>
+                                <em class="icon-doc" style="color:#fff !important"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES" style="color:#fff !important">Dasboard</span>
                             </a>
-                            <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard">
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="dashboard" style="color:#fff !important">
                                 <li class="sidebar-subnav-header">Dasboard</li>
                                 <li class=" ">
-                                    <a href="home" title="Dasboard">
+                                    <a href="/home" title="Dasboard">
                                         <span data-localize="sidebar.nav.pages.LOGIN">Dasboard</span>
                                     </a>
                                 </li>
+                                @can('user-create')
                                 <li class=" ">
-                                    <a href="newuser" title="Dasboard">
+                                    <a href="/newuser" title="Dasboard">
                                         <span data-localize="sidebar.nav.pages.LOGIN">New user</span>
                                     </a>
                                 </li>
+                                @endcan
+                                @can('user-create')
                                 <li class=" ">
-                                    <a href="all/user" title="user">
+                                    <a href="/all/user" title="user">
                                         <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
                                     </a>
                                 </li>
+                                @endcan
+                                @can('departiment-update')
+                                <li class=" ">
+                                    <a href="/newdepartment" title="newdepa">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">Users</span>
+                                    </a>
+                                </li>
+                                @endcan
                             </ul>
                         </li>
-                        @endrole
+
                         {{-- end of the dashord part --}}
-                        @role('writer|administrator|superadmin')
+
                         <li class="">
-                            <a href="#story" title="Post" data-toggle="collapse">
-                                <em class="icon-doc"></em>
-                                <span data-localize="sidebar.nav.pages.PAGES">Post </span>
+                            <a href="#project" title="Project submite and  review" data-toggle="collapse">
+                                <em class="icon-doc" style="color:#fff !important"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES" style="color:#fff !important">PROJECT </span>
                             </a>
-                            <ul class="sidebar-nav sidebar-subnav collapse" id="story">
-                                <li class="sidebar-subnav-header">Post</li>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="project">
+                                <li class="sidebar-subnav-header">PROJECT</li>
                                 <li class=" ">
-                                    <a href="/Createstory" title="New Story">
-                                        <span data-localize="sidebar.nav.pages.LOGIN">New Story</span>
+                                    <a href="/newprojectinsert" title="new project">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New Project</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="/createcategory" title="New category">
-                                        <span data-localize="sidebar.nav.pages.LOGIN">New category</span>
-                                    </a>
-                                </li>
-                                <li class=" ">
-                                    <a href="/viewstory" title="New category">
-                                        <span data-localize="sidebar.nav.pages.LOGIN">View Story</span>
+                                    <a href="/viewprojectsented" title="New category">
+                                        <div class="float-right badge badge-success">{!!$selectunreaded!!}</div>
+                                        <span data-localize="sidebar.nav.pages.LOGIN">View project</span>
                                     </a>
                                 </li>
 
-                                <li class=" ">
-                                    <a href="/Message" title="Message">
-                                        <span data-localize="sidebar.nav.pages.LOGIN">Message </span>
-                                    </a>
-                                </li>
-                                @endrole
+
                             </ul>
                         </li>
                         {{-- doropdown  in to create lore and pamissinon --}}
-                        @role('administrator|superadmin')
+                          @can('privillage')
+
                         <li class="">
                             <a href="#privilage" title="Privilage" data-toggle="collapse">
-                                <em class="icon-doc"></em>
-                                <span data-localize="sidebar.nav.pages.PAGES">Privilage</span>
+                                <em class="icon-chemistry" style="color:#fff !important"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES" style="color:#fff !important">Privilage</span>
                             </a>
                             <ul class="sidebar-nav sidebar-subnav collapse" id="privilage">
                                 <li class="sidebar-subnav-header">Privilage</li>
                                 <li class=" ">
-                                    <a href="newrole" title="New Role">
+                                    <a href="/newrole" title="New Role">
                                         <span data-localize="sidebar.nav.pages.LOGIN">New Role</span>
                                     </a>
                                 </li>
                                 <li class=" ">
-                                    <a href="setting" title="permission">
+                                    <a href="/setting" title="permission">
                                         <span>setting</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        @endrole
-                        @role('writer|administrator|superadmin')
-                        <li class=" ">
-                            <a href="#layout" title="Layouts" data-toggle="collapse">
-                                <em class="icon-layers"></em>
-                                <span>Uplad product</span>
+                        @endcan
+                        @can('company')
+                        <li class="">
+                            <a href="#indexcreatecompany" title="companys" data-toggle="collapse">
+                                <em class="icon-note" style="color:#fff !important"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES" style="color:#fff !important">Internership</span>
                             </a>
-                            <ul class="sidebar-nav sidebar-subnav collapse" id="layout">
-                                <li class="sidebar-subnav-header">Layouts</li>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="indexcreatecompany">
+                                <li class="sidebar-subnav-header">Internership</li>
                                 <li class=" ">
-                                    <a href="/newproduct" title="New product">
-                                        <span>Upload new product</span>
+                                    <a href="/newcompany" title="indexcreatecompany">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New company</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/indexcreatecompany" title="permission">
+                                        <span>Report and requests</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        @endrole
+                        @endcan
+                        {{-- @can('view_interneshipcomny') --}}
+                         <li class="">
+                            <a href="#indexcreatecompany" title="companys" data-toggle="collapse">
+                                <em class="icon-note" style="color:#fff !important"></em>
+                                <span data-localize="sidebar.nav.pages.PAGES" style="color:#fff !important">Internership</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="indexcreatecompany">
+                                <li class="sidebar-subnav-header">Internership</li>
+                                <li class=" ">
+                                    <a href="/newcompany" title="indexcreatecompany">
+                                        <span data-localize="sidebar.nav.pages.LOGIN">New company</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="/indexcreatecompany" title="permission">
+                                        <span>Report and requests</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                         {{-- @endcan --}}
+
+
+
+{{--
+                        <li class=" ">
+                            <a href="#elements" title="Elements" data-toggle="collapse">
+                                <em class="icon-chemistry"></em>
+                                <span data-localize="sidebar.nav.element.ELEMENTS">Elements</span>
+                            </a>
+                            <ul class="sidebar-nav sidebar-subnav collapse" id="elements">
+                                <li class="sidebar-subnav-header">Elements</li>
+                                <li class=" ">
+                                    <a href="buttons.html" title="Buttons">
+                                        <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="notifications.html" title="Notifications">
+                                        <span data-localize="sidebar.nav.element.NOTIFICATION">Notifications</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="sweetalert.html" title="Sweet Alert">
+                                        <span>Sweet Alert</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="carousel.html" title="Carousel">
+                                        <span data-localize="sidebar.nav.element.INTERACTION">Carousel</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="spinners.html" title="Spinners">
+                                        <span data-localize="sidebar.nav.element.SPINNER">Spinners</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="animations.html" title="Animations">
+                                        <span data-localize="sidebar.nav.element.ANIMATION">Animations</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="dropdown-animations.html" title="Dropdown">
+                                        <span data-localize="sidebar.nav.element.DROPDOWN">Dropdown</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="nestable.html" title="Nestable">
+                                        <span>Nestable</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="sortable.html" title="Sortable">
+                                        <span>Sortable</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="cards.html" title="Cards">
+                                        <span data-localize="sidebar.nav.element.CARDS">Cards</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="portlets.html" title="Portlets">
+                                        <span data-localize="sidebar.nav.element.PORTLET">Portlets</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="grid.html" title="Grid">
+                                        <span data-localize="sidebar.nav.element.GRID">Grid</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="grid-masonry.html" title="Grid Masonry">
+                                        <span data-localize="sidebar.nav.element.GRID_MASONRY">Grid Masonry</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="typo.html" title="Typography">
+                                        <span data-localize="sidebar.nav.element.TYPO">Typography</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="icons-font.html" title="Font Icons">
+                                        <div class="float-right badge badge-success">+400</div>
+                                        <span data-localize="sidebar.nav.element.FONT_ICON">Font Icons</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="icons-weather.html" title="Weather Icons">
+                                        <div class="float-right badge badge-success">+100</div>
+                                        <span data-localize="sidebar.nav.element.WEATHER_ICON">Weather Icons</span>
+                                    </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="colors.html" title="Colors">
+                                        <span data-localize="sidebar.nav.element.COLOR">Colors</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        @endrole --}}
                         {{--<li class="nav-heading ">
             <span data-localize="sidebar.heading.COMPONENTS">Components</span>
           </li>
-          <li class=" ">
-            <a href="#elements" title="Elements" data-toggle="collapse">
-              <em class="icon-chemistry"></em>
-              <span data-localize="sidebar.nav.element.ELEMENTS">Elements</span>
-            </a>
-            <ul class="sidebar-nav sidebar-subnav collapse" id="elements">
-              <li class="sidebar-subnav-header">Elements</li>
-              <li class=" ">
-                <a href="buttons.html" title="Buttons">
-                  <span data-localize="sidebar.nav.element.BUTTON">Buttons</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="notifications.html" title="Notifications">
-                  <span data-localize="sidebar.nav.element.NOTIFICATION">Notifications</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="sweetalert.html" title="Sweet Alert">
-                  <span>Sweet Alert</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="carousel.html" title="Carousel">
-                  <span data-localize="sidebar.nav.element.INTERACTION">Carousel</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="spinners.html" title="Spinners">
-                  <span data-localize="sidebar.nav.element.SPINNER">Spinners</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="animations.html" title="Animations">
-                  <span data-localize="sidebar.nav.element.ANIMATION">Animations</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="dropdown-animations.html" title="Dropdown">
-                  <span data-localize="sidebar.nav.element.DROPDOWN">Dropdown</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="nestable.html" title="Nestable">
-                  <span>Nestable</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="sortable.html" title="Sortable">
-                  <span>Sortable</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="cards.html" title="Cards">
-                  <span data-localize="sidebar.nav.element.CARDS">Cards</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="portlets.html" title="Portlets">
-                  <span data-localize="sidebar.nav.element.PORTLET">Portlets</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="grid.html" title="Grid">
-                  <span data-localize="sidebar.nav.element.GRID">Grid</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="grid-masonry.html" title="Grid Masonry">
-                  <span data-localize="sidebar.nav.element.GRID_MASONRY">Grid Masonry</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="typo.html" title="Typography">
-                  <span data-localize="sidebar.nav.element.TYPO">Typography</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="icons-font.html" title="Font Icons">
-                  <div class="float-right badge badge-success">+400</div>
-                  <span data-localize="sidebar.nav.element.FONT_ICON">Font Icons</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="icons-weather.html" title="Weather Icons">
-                  <div class="float-right badge badge-success">+100</div>
-                  <span data-localize="sidebar.nav.element.WEATHER_ICON">Weather Icons</span>
-                </a>
-              </li>
-              <li class=" ">
-                <a href="colors.html" title="Colors">
-                  <span data-localize="sidebar.nav.element.COLOR">Colors</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+
           <li class=" ">
             <a href="#forms" title="Forms" data-toggle="collapse">
               <em class="icon-note"></em>
@@ -888,6 +928,13 @@
         <!-- offsidebar-->
 
         <div class="container">
+              @if ($message = Session::get('message'))
+                <div class="alert alert-success text-center">
+                <ul>
+                        {{ $message }}
+                </ul>
+                </div>
+                @endif
 
             @yield('content')
 
@@ -895,74 +942,80 @@
         <!-- Main section-->
         <!-- Page footer-->
         <footer class="footer-container">
-            <span>&copy; yanjye limited</span>
+            <span>&copy; IIS</span>
         </footer>
     </div>
     <!-- =============== VENDOR SCRIPTS ===============-->
     <!-- MODERNIZR-->
-    <script src="{{ url('public/assets/admin/vendor/modernizr/modernizr.custom.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/modernizr/modernizr.custom.js')}}"></script>
     <!-- JQUERY-->
-    <script src="{{ url('public/assets/admin/vendor/jquery/dist/jquery.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery/dist/jquery.js')}}"></script>
     <!-- BOOTSTRAP-->
-    <script src="{{ url('public/assets/admin/vendor/popper.js/dist/umd/popper.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/popper.js/dist/umd/popper.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
     <!-- CHART.JS-->
-    <script src="{{ url('public/assets/admin/vendor/chart.js/dist/Chart.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/chart.js/dist/Chart.js')}}"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-    {{-- <script src="{{ url('public/assets/admin/js/summernote.js')}}"></script> --}}
+    {{-- <script src="{{ url('assets/admin/js/summernote.js')}}"></script> --}}
 
 
     <!-- STORAGE API-->
-    <script src="{{ url('public/assets/admin/vendor/js-storage/js.storage.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/js-storage/js.storage.js')}}"></script>
     <!-- JQUERY EASING-->
-    <script src="{{ url('public/assets/admin/vendor/jquery.easing/jquery.easing.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery.easing/jquery.easing.js')}}"></script>
     <!-- ANIMO-->
-    <script src="{{ url('public/assets/admin/vendor/animo/animo.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/animo/animo.js')}}"></script>
     <!-- SCREENFULL-->
-    <script src="{{ url('public/assets/admin/vendor/screenfull/dist/screenfull.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/screenfull/dist/screenfull.js')}}"></script>
     <!-- LOCALIZE-->
-    <script src="{{ url('public/assets/admin/vendor/jquery-localize/dist/jquery.localize.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery-localize/dist/jquery.localize.js')}}"></script>
     <!-- =============== PAGE VENDOR SCRIPTS ===============-->
     <!-- SLIMSCROLL-->
-    <script src="{{ url('public/assets/admin/vendor/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery-slimscroll/jquery.slimscroll.js')}}"></script>
     <!-- SPARKLINE-->
-    <script src="{{ url('public/assets/admin/vendor/jquery-sparkline/jquery.sparkline.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery-sparkline/jquery.sparkline.js')}}"></script>
     <!-- FLOT CHART-->
-    <script src="{{ url('public/assets/admin/vendor/flot/jquery.flot.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/flot/jquery.flot.resize.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/flot/jquery.flot.pie.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/flot/jquery.flot.time.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/flot/jquery.flot.categories.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/jquery.flot.spline/jquery.flot.spline.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/flot/jquery.flot.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery.flot.tooltip/js/jquery.flot.tooltip.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/flot/jquery.flot.resize.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/flot/jquery.flot.pie.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/flot/jquery.flot.time.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/flot/jquery.flot.categories.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jquery.flot.spline/jquery.flot.spline.js')}}"></script>
     <!-- EASY PIE CHART-->
-    <script src="{{ url('public/assets/admin/vendor/easy-pie-chart/dist/jquery.easypiechart.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/easy-pie-chart/dist/jquery.easypiechart.js')}}"></script>
 
     <!-- Datatables-->
-    <script src="{{ url('public/assets/admin/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons/js/dataTables.buttons.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons/js/buttons.colVis.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons/js/buttons.flash.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons/js/buttons.html5.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-buttons/js/buttons.print.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-keytable/js/dataTables.keyTable.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-responsive/js/dataTables.responsive.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/jszip/dist/jszip.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/pdfmake/build/pdfmake.js')}}"></script>
-    <script src="{{ url('public/assets/admin/vendor/pdfmake/build/vfs_fonts.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net/js/jquery.dataTables.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/dataTables.buttons.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.colVis.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.flash.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.html5.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-buttons/js/buttons.print.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-keytable/js/dataTables.keyTable.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-responsive/js/dataTables.responsive.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/jszip/dist/jszip.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/pdfmake/build/pdfmake.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/pdfmake/build/vfs_fonts.js')}}"></script>
 
     <!-- =============== APP SCRIPTS ===============-->
     <!-- MOMENT JS-->
-    <script src="{{ url('public/assets/admin/vendor/moment/min/moment-with-locales.js')}}"></script>
+    <script src="{{ url('assets/admin/vendor/moment/min/moment-with-locales.js')}}"></script>
     <!-- =============== APP SCRIPTS ===============-->
-    <script src="{{ url('public/assets/admin/js/app.js')}}"></script>
-    <script src="{{ url('public/assets/admin/js/js.js')}}"></script>
+    <script src="{{ url('assets/admin/js/app.js')}}"></script>
+    <script src="{{ url('assets/admin/js/js.js')}}"></script>
 
+<script>
 
+    $(document).ready(function(){
+         $(".alert").slideDown(300).delay(5000).slideUp(300);
+    });
+
+    </script>
 
 </body>
 
